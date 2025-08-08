@@ -6,6 +6,7 @@ import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import BackButton from '@/components/BackButton';
+import { ExternalLink } from 'lucide-react';
 
 export default function RoboticsLab() {
   const [showFullText, setShowFullText] = useState(false);
@@ -15,19 +16,35 @@ export default function RoboticsLab() {
       <BackButton />
       
       {/* Hero Section */}
-      <div className="relative h-[600px] w-full">
+      <div className="relative h-[700px] w-full overflow-hidden">
         <Image
           src="/images/robotics-lab.jpg"
           alt="Robotics Lab"
           fill
           className="object-cover object-center"
-          style={{ objectPosition: 'center 40%' }}
+          priority
+          quality={95}
+          sizes="100vw"
+          style={{
+            objectFit: 'cover',
+            objectPosition: 'center'
+          }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-purple-900/20 via-purple-800/15 to-purple-700/25" />
+        <div className="absolute inset-0 bg-black/40" />
+        
+        {/* Content */}
         <div className="absolute inset-0 flex items-center justify-center">
-          <h1 className="text-5xl font-bold text-white text-center drop-shadow-lg">
-            Robotics, AI & Emerging Technologies
-          </h1>
+          <div className="text-center text-white max-w-4xl px-4">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 drop-shadow-lg transition-all duration-500">
+              Robotics, AI & Emerging Technologies
+            </h1>
+            <p className="text-xl md:text-2xl drop-shadow-md mb-4 transition-all duration-500">
+              Makeistan Robotics Lab
+            </p>
+            <p className="text-lg drop-shadow-md transition-all duration-500">
+              Building the future with robotics, AI, IoT, drones, and AR/VR technologies
+            </p>
+          </div>
         </div>
       </div>
 
@@ -101,15 +118,23 @@ export default function RoboticsLab() {
             </div>
           </section>
 
-          {/* Back Button */}
-          <div className="mt-12 text-center">
-            <Link 
-              href="/"
-              className="inline-block bg-purple-600 text-white px-3 py-1.5 rounded-md hover:bg-purple-700 transition-colors text-sm font-medium"
-            >
-              ← Back to Home
-            </Link>
-          </div>
+          {/* Collaboration Section */}
+          <section className="mt-16 bg-gradient-to-r from-purple-50 to-blue-50 rounded-2xl p-8 text-center">
+            <h3 className="text-2xl font-bold text-gray-800 mb-4">Want to Collaborate?</h3>
+            <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+              Interested in partnering with our Robotics Lab or have a project idea? We'd love to hear from you and explore how we can work together.
+            </p>
+            <div className="flex justify-center">
+              <a
+                href="mailto:Info@makeistan.com?subject=Robotics Lab Collaboration&body=Hello Robotics Lab team,%0D%0A%0D%0AI am interested in collaborating with your lab and would like to discuss potential opportunities.%0D%0A%0D%0AThank you!"
+                className="bg-purple-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-purple-700 transition-colors duration-300 flex items-center justify-center gap-2"
+              >
+                Get In Touch
+                <ExternalLink size={18} />
+              </a>
+            </div>
+          </section>
+
         </div>
       </div>
 

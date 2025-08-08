@@ -8,9 +8,8 @@ export default function Footer() {
 
   const footerLinks = {
     about: [
-      { name: 'Our Story', href: '/about' },
-      { name: 'Team', href: '/team' },
-      { name: 'Vision & Mission', href: '/vision' }
+      { name: 'About Us', href: '/about' },
+      { name: 'Our Team', href: '/team' }
     ],
     labs: [
       { name: 'Climate Innovation', href: '/labs/climate' },
@@ -44,14 +43,25 @@ export default function Footer() {
           {/* Brand Section */}
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center group">
-              <span className="text-2xl font-bold text-white tracking-wider hover:text-gray-300 transition-colors">
-                MAKEISTAN
-              </span>
+              <img 
+                src="/images/logo/llogo.png" 
+                alt="MAKEISTAN" 
+                className="h-20 w-auto hover:opacity-80 transition-opacity duration-300"
+              />
             </Link>
             <p className="mt-4 text-gray-400 max-w-md">
               Gilgit Baltistan's first makerspace, empowering innovators to build sustainable solutions 
               through robotics, AI, climate action, and green energy.
             </p>
+            
+            {/* Location */}
+            <div className="mt-4 flex items-center text-gray-400">
+              <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+              </svg>
+              <span className="text-sm">Jutial, Gilgit, Gilgit Baltistan</span>
+            </div>
+            
             <div className="mt-6 flex space-x-6">
               {footerLinks.social.map((item) => (
                 <a

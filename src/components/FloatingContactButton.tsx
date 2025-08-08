@@ -26,7 +26,7 @@ export default function FloatingContactButton() {
     const body = encodeURIComponent(
       `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
     );
-    const mailtoLink = `mailto:info@makeistan.org?subject=${subject}&body=${body}`;
+    const mailtoLink = `mailto:Info@makeistan.com?subject=${subject}&body=${body}`;
     
     // Open email client
     window.location.href = mailtoLink;

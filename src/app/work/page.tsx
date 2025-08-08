@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import BackButton from '@/components/BackButton';
-import { ExternalLink, Calendar, MapPin, Users, Target, ArrowRight } from 'lucide-react';
+import { ExternalLink, Calendar, MapPin, Users, Target } from 'lucide-react';
 
 const projects = [
   {
@@ -62,24 +62,7 @@ const projects = [
       "Enhanced community resilience to climate challenges"
     ]
   },
-  {
-    id: 4,
-    title: "Makeistan Innovation Fellowship at KIU",
-    description: "A 3-week pilot program that trained 140 students in design thinking, digital fabrication, and entrepreneurship, resulting in 16 interdisciplinary innovation projects.",
-    location: "Karakoram International University, Gilgit",
-    duration: "3-week pilot program",
-    beneficiaries: "140 Students",
-    status: "Completed",
-    statusColor: "bg-green-100 text-green-800",
-    image: "🎓",
-    category: "Education & Innovation",
-    impact: [
-      "140 students trained in innovation methodologies",
-      "16 real-world problem-solving projects completed",
-      "Permanent Maker Lab established at KIU",
-      "Youth-led innovation ecosystem catalyzed"
-    ]
-  },
+
   {
     id: 5,
     title: "Community Robotics Program",
@@ -234,8 +217,8 @@ export default function OurWorkPage() {
                     href={`/projects/${project.id}`}
                     className="flex-1 bg-blue-600 text-white px-4 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-300 flex items-center justify-center gap-2 group"
                   >
-                    View Details
-                    <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                    Learn More
+                    <ExternalLink size={16} />
                   </Link>
                 </div>
 
@@ -256,13 +239,13 @@ export default function OurWorkPage() {
             Join us in creating positive change in communities across Pakistan.
           </p>
           <div className="flex justify-center">
-            <Link
-              href="/#contact"
+            <a
+              href="mailto:Info@makeistan.com?subject=Inquiry about Makeistan Projects&body=Hello Makeistan team,%0D%0A%0D%0AI am interested in learning more about your projects and would like to get in touch.%0D%0A%0D%0AThank you!"
               className="bg-blue-600 text-white px-8 py-4 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-300 flex items-center justify-center gap-2"
             >
               Get In Touch
               <ExternalLink size={18} />
-            </Link>
+            </a>
           </div>
         </div>
       </div>

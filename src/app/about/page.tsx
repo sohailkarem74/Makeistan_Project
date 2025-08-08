@@ -168,12 +168,17 @@ export default function AboutUs() {
               <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-2xl text-center">
                 <div className="text-3xl mb-4">📧</div>
                 <h4 className="text-xl font-semibold text-gray-800 mb-3">Email</h4>
-                <p className="text-gray-700">info@makeistan.org</p>
+                <a 
+                  href="mailto:Info@makeistan.com?subject=Inquiry about Makeistan&body=Hello Makeistan team,%0D%0A%0D%0AI would like to learn more about your work and initiatives.%0D%0A%0D%0AThank you!"
+                  className="text-blue-600 hover:text-blue-800 transition-colors duration-300 font-medium"
+                >
+                  Info@makeistan.com
+                </a>
               </div>
               <div className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-2xl text-center">
                 <div className="text-3xl mb-4">🌐</div>
                 <h4 className="text-xl font-semibold text-gray-800 mb-3">Website</h4>
-                <p className="text-gray-700">www.makeistan.org</p>
+                <p className="text-gray-700">www.makeistan.com</p>
               </div>
             </div>
           </div>

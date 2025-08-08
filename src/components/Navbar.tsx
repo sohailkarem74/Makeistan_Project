@@ -29,12 +29,8 @@ const navItems = [
       ]
     },
     {
-      name: 'Programs',
-      dropdown: [
-        { name: 'Training Workshops', href: '/programs/training', icon: '📚' },
-        { name: 'Innovation Fellowship', href: '/programs/fellowship', icon: '🎓' },
-        { name: 'Projects', href: '/programs/projects', icon: '🚀' }
-      ]
+      name: 'Fellowship Programs',
+      href: '/programs'
     },
     {
       name: 'Blog',
@@ -46,20 +42,22 @@ const navItems = [
     }
 ];
   return (
-    <nav className="fixed w-full bg-gray-900/95 backdrop-blur-md z-50 shadow-lg border-b border-gray-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-20">
-          {/* Logo */}
-          <div className="flex items-center">
-            <Link href="/" className="flex items-center">
-              <span className="text-2xl font-bold text-white tracking-wider hover:text-gray-300 transition-colors duration-300">
-                MAKEISTAN
-              </span>
-            </Link>
-          </div>
+    <nav className="fixed w-full bg-gray-900/95 backdrop-blur-md z-50 shadow-lg border-b border-gray-700/50">
+      <div className="max-w-7xl mx-auto pl-1 pr-4 sm:pr-6 lg:pr-8">
+          <div className="flex items-center h-20">
+            {/* Logo - Left Side */}
+            <div className="flex items-center h-full">
+              <Link href="/" className="flex items-center">
+                <img 
+                  src="/images/logo/llogo.png" 
+                  alt="MAKEISTAN" 
+                  className="h-40 w-auto"
+                />
+              </Link>
+            </div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-1">
+          {/* Desktop Navigation - Right Side */}
+          <div className="hidden md:flex items-center space-x-6 ml-auto">
             {navItems.map((item) => (
               <div
                 key={item.name}
@@ -80,7 +78,7 @@ const navItems = [
               >
                 {item.dropdown ? (
                   <>
-                    <button className="px-4 py-2 text-gray-300 hover:text-white font-medium transition-colors duration-300">
+                    <button className="px-4 py-2 text-white hover:text-gray-200 font-medium transition-colors duration-300">
                       {item.name}
                     </button>
                     {activeDropdown === item.name && (
@@ -107,7 +105,7 @@ const navItems = [
                               href={dropdownItem.href}
                               target={dropdownItem.target || '_self'}
                               title={dropdownItem.title || dropdownItem.name}
-                              className="group/item flex items-center px-4 py-3 text-gray-300 hover:bg-gradient-to-r hover:from-blue-600/20 hover:to-purple-600/20 hover:text-white transition-all duration-300 transform hover:translate-x-1"
+                              className="group/item flex items-center px-4 py-3 text-white hover:bg-gradient-to-r hover:from-blue-600/20 hover:to-purple-600/20 hover:text-gray-200 transition-all duration-300 transform hover:translate-x-1"
                             >
                               <span className="text-xl mr-3 opacity-70 group-hover/item:opacity-100 group-hover/item:scale-110 transition-all duration-300">
                                 {dropdownItem.icon}
@@ -122,7 +120,7 @@ const navItems = [
                 ) : (
                   <Link
                     href={item.href || '/'}
-                    className="px-4 py-2 text-gray-300 hover:text-white font-medium transition-colors duration-300"
+                    className="px-4 py-2 text-white hover:text-gray-200 font-medium transition-colors duration-300"
                   >
                     {item.name}
                   </Link>
@@ -132,7 +130,7 @@ const navItems = [
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden flex items-center">
+          <div className="md:hidden flex items-center ml-auto">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white transition-colors duration-300"
@@ -162,7 +160,7 @@ const navItems = [
                   <div>
                     <button
                       onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)}
-                      className="w-full text-left text-base font-medium text-gray-300 hover:text-white"
+                      className="w-full text-left text-base font-medium text-white hover:text-gray-200"
                     >
                       {item.name}
                     </button>
@@ -172,7 +170,7 @@ const navItems = [
                           <Link
                             key={dropdownItem.name}
                             href={dropdownItem.href}
-                            className="flex items-center py-2 text-sm text-gray-400 hover:text-white"
+                            className="flex items-center py-2 text-sm text-white hover:text-gray-200"
                             onClick={() => setIsMobileMenuOpen(false)}
                           >
                             <span className="mr-2">{dropdownItem.icon}</span>
@@ -185,7 +183,7 @@ const navItems = [
                 ) : (
                   <Link
                     href={item.href || '/'}
-                    className="block text-base font-medium text-gray-300 hover:text-white"
+                    className="block text-base font-medium text-white hover:text-gray-200"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {item.name}

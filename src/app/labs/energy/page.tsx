@@ -6,6 +6,7 @@ import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import BackButton from '@/components/BackButton';
+import { ExternalLink } from 'lucide-react';
 
 export default function EnergyLab() {
   return (
@@ -14,19 +15,35 @@ export default function EnergyLab() {
       <BackButton />
       
       {/* Hero Section */}
-      <div className="relative h-[600px] w-full">
+      <div className="relative h-[700px] w-full overflow-hidden">
         <Image
           src="/images/main5.jpg"
           alt="Green Energy Lab"
           fill
           className="object-cover object-center"
-          style={{ objectPosition: 'center 40%' }}
+          priority
+          quality={95}
+          sizes="100vw"
+          style={{
+            objectFit: 'cover',
+            objectPosition: 'center'
+          }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-green-900/20 via-green-800/15 to-green-700/25" />
+        <div className="absolute inset-0 bg-black/40" />
+        
+        {/* Content */}
         <div className="absolute inset-0 flex items-center justify-center">
-          <h1 className="text-5xl font-bold text-white text-center drop-shadow-lg">
-            Green Energy Lab
-          </h1>
+          <div className="text-center text-white max-w-4xl px-4">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 drop-shadow-lg transition-all duration-500">
+              Green Energy Lab
+            </h1>
+            <p className="text-xl md:text-2xl drop-shadow-md mb-4 transition-all duration-500">
+              Makeistan Green Energy Lab
+            </p>
+            <p className="text-lg drop-shadow-md transition-all duration-500">
+              Powering mountains sustainably with innovative energy solutions
+            </p>
+          </div>
         </div>
       </div>
 
@@ -82,15 +99,24 @@ export default function EnergyLab() {
             </p>
           </section>
 
-          {/* Back Button */}
-          <div className="mt-12 text-center">
-            <Link 
-              href="/"
-              className="inline-block bg-green-600 text-white px-3 py-1.5 rounded-md hover:bg-green-700 transition-colors text-sm font-medium"
-            >
-              ← Back to Home
-            </Link>
-          </div>
+          {/* Collaboration Section */}
+          <section className="mt-16 bg-gradient-to-r from-orange-50 to-yellow-50 rounded-2xl p-8 text-center">
+            <h3 className="text-2xl font-bold text-gray-800 mb-4">Want to Collaborate?</h3>
+            <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+              Interested in partnering with our Energy Lab or have a renewable energy project? We'd love to hear from you and explore how we can work together.
+ a mail incon in get in otouch buttons in labs in labs get in touvh butoons add the icon of our work
+             </p>
+            <div className="flex justify-center">
+              <a
+                href="mailto:Info@makeistan.com?subject=Energy Lab Collaboration&body=Hello Energy Lab team,%0D%0A%0D%0AI am interested in collaborating with your lab and would like to discuss potential opportunities.%0D%0A%0D%0AThank you!"
+                className="bg-orange-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-orange-700 transition-colors duration-300 flex items-center justify-center gap-2"
+              >
+                Get In Touch
+                <ExternalLink size={18} />
+              </a>
+            </div>
+          </section>
+
         </div>
       </div>
 

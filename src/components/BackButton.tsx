@@ -12,7 +12,7 @@ export default function BackButton({ className = '' }: BackButtonProps) {
   const router = useRouter();
 
   const handleBack = () => {
-    router.push('/');
+    router.back();
   };
 
   return (

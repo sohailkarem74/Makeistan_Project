@@ -1,13 +1,12 @@
 "use client";
 
-import React, { useState } from 'react';
+import React from 'react';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 import BackButton from '@/components/BackButton';
 import { ExternalLink, Mail, MapPin, Briefcase } from 'lucide-react';
 
 export default function TeamPage() {
-  const [selectedMember, setSelectedMember] = useState(null);
 
   return (
     <>
@@ -60,10 +59,10 @@ export default function TeamPage() {
                 <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-blue-800 transition-colors duration-300">Ehsam Ullah Baig</h3>
                 <p className="text-blue-600 font-medium mb-3">CEO & Founder</p>
                 <p className="text-gray-600 text-sm mb-4 leading-relaxed">
-                  Visionary leader with 10+ years in innovation and technology. Passionate about empowering communities through maker education.
+                  "I've never believed that innovation belongs only in labs or big tech hubs. I believe it starts wherever someone dares to ask, 'What if we built something better?' That belief sparked Makeistan not as a typical startup, but as a space for young minds to explore, build, and create solutions that truly matter. Over the years, this journey has taken me into clean energy, climate tech, smart agriculture, and real world education across Pakistan. I'm still learning every step of the way. But I'm driven by the idea that meaningful change doesn't need to be massive it just needs to be made."
                 </p>
                 <a 
-                  href="https://linkedin.com/in/johndoe" 
+                  href="https://www.linkedin.com/in/ehsamullahbaig" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center w-10 h-10 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors duration-300 hover:scale-110 transform"
@@ -75,158 +74,7 @@ export default function TeamPage() {
               </div>
             </div>
 
-            {/* Expandable Member Details */}
-            {selectedMember && (
-              <div className="mb-16 animate-fade-in-up">
-                <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 max-w-4xl mx-auto">
-                  {selectedMember === 'jane' && (
-                    <div>
-                      <div className="flex items-center gap-4 mb-6">
-                        <div className="w-16 h-16 rounded-full bg-gradient-to-br from-purple-400 to-pink-500 p-1">
-                          <img 
-                            src="/images/team/sohail.jpg" 
-                            alt="Sohail Karim" 
-                            className="w-full h-full rounded-full object-cover object-center"
-                          />
-                        </div>
-                        <div>
-                          <h3 className="text-2xl font-bold text-gray-800">Sohail Karim</h3>
-                          <p className="text-purple-600 font-medium">Chief Technology Officer</p>
-                        </div>
-                      </div>
-                      <div className="grid md:grid-cols-2 gap-6">
-                        <div>
-                          <h4 className="font-semibold text-gray-800 mb-3">Background & Expertise:</h4>
-                          <ul className="space-y-2 text-gray-600">
-                            <li className="flex items-center gap-2"><div className="w-2 h-2 bg-purple-500 rounded-full"></div>10+ years in robotics and AI development</li>
-                            <li className="flex items-center gap-2"><div className="w-2 h-2 bg-purple-500 rounded-full"></div>Former lead engineer at tech startups</li>
-                            <li className="flex items-center gap-2"><div className="w-2 h-2 bg-purple-500 rounded-full"></div>PhD in Computer Science from MIT</li>
-                            <li className="flex items-center gap-2"><div className="w-2 h-2 bg-purple-500 rounded-full"></div>Published researcher in machine learning</li>
-                          </ul>
-                        </div>
-                        <div>
-                          <h4 className="font-semibold text-gray-800 mb-3">Current Projects:</h4>
-                          <ul className="space-y-2 text-gray-600">
-                            <li className="flex items-center gap-2"><div className="w-2 h-2 bg-purple-500 rounded-full"></div>Leading robotics lab development</li>
-                            <li className="flex items-center gap-2"><div className="w-2 h-2 bg-purple-500 rounded-full"></div>AI curriculum design for students</li>
-                            <li className="flex items-center gap-2"><div className="w-2 h-2 bg-purple-500 rounded-full"></div>Community tech workshops</li>
-                            <li className="flex items-center gap-2"><div className="w-2 h-2 bg-purple-500 rounded-full"></div>Innovation mentorship programs</li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  )}
-                  {selectedMember === 'ahmed' && (
-                    <div>
-                      <div className="flex items-center gap-4 mb-6">
-                        <div className="w-16 h-16 rounded-full bg-gradient-to-br from-green-400 to-teal-500 p-1">
-                          <div className="w-full h-full rounded-full bg-gray-200 flex items-center justify-center text-2xl font-bold text-gray-600">👨‍🔬</div>
-                        </div>
-                        <div>
-                          <h3 className="text-2xl font-bold text-gray-800">Malaika Khan</h3>
-                          <p className="text-green-600 font-medium">Climate Lab Director</p>
-                        </div>
-                      </div>
-                      <div className="grid md:grid-cols-2 gap-6">
-                        <div>
-                          <h4 className="font-semibold text-gray-800 mb-3">Background & Expertise:</h4>
-                          <ul className="space-y-2 text-gray-600">
-                            <li className="flex items-center gap-2"><div className="w-2 h-2 bg-green-500 rounded-full"></div>Environmental Engineering degree</li>
-                            <li className="flex items-center gap-2"><div className="w-2 h-2 bg-green-500 rounded-full"></div>8+ years in sustainable development</li>
-                            <li className="flex items-center gap-2"><div className="w-2 h-2 bg-green-500 rounded-full"></div>Climate change research specialist</li>
-                            <li className="flex items-center gap-2"><div className="w-2 h-2 bg-green-500 rounded-full"></div>Community resilience expert</li>
-                          </ul>
-                        </div>
-                        <div>
-                          <h4 className="font-semibold text-gray-800 mb-3">Current Projects:</h4>
-                          <ul className="space-y-2 text-gray-600">
-                            <li className="flex items-center gap-2"><div className="w-2 h-2 bg-green-500 rounded-full"></div>Climate adaptation solutions</li>
-                            <li className="flex items-center gap-2"><div className="w-2 h-2 bg-green-500 rounded-full"></div>Sustainable housing initiatives</li>
-                            <li className="flex items-center gap-2"><div className="w-2 h-2 bg-green-500 rounded-full"></div>Environmental education programs</li>
-                            <li className="flex items-center gap-2"><div className="w-2 h-2 bg-green-500 rounded-full"></div>Community outreach campaigns</li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  )}
-                  {selectedMember === 'sarah' && (
-                    <div>
-                      <div className="flex items-center gap-4 mb-6">
-                        <div className="w-16 h-16 rounded-full bg-gradient-to-br from-orange-400 to-red-500 p-1">
-                          <div className="w-full h-full rounded-full bg-gray-200 flex items-center justify-center text-2xl font-bold text-gray-600">👩‍🎓</div>
-                        </div>
-                        <div>
-                          <h3 className="text-2xl font-bold text-gray-800">Yazdan Ali Khan</h3>
-                          <p className="text-orange-600 font-medium">Head of Education</p>
-                        </div>
-                      </div>
-                      <div className="grid md:grid-cols-2 gap-6">
-                        <div>
-                          <h4 className="font-semibold text-gray-800 mb-3">Background & Expertise:</h4>
-                          <ul className="space-y-2 text-gray-600">
-                            <li className="flex items-center gap-2"><div className="w-2 h-2 bg-orange-500 rounded-full"></div>Master's in Educational Technology</li>
-                            <li className="flex items-center gap-2"><div className="w-2 h-2 bg-orange-500 rounded-full"></div>12+ years in STEM education</li>
-                            <li className="flex items-center gap-2"><div className="w-2 h-2 bg-orange-500 rounded-full"></div>Curriculum development specialist</li>
-                            <li className="flex items-center gap-2"><div className="w-2 h-2 bg-orange-500 rounded-full"></div>Community development advocate</li>
-                          </ul>
-                        </div>
-                        <div>
-                          <h4 className="font-semibold text-gray-800 mb-3">Current Projects:</h4>
-                          <ul className="space-y-2 text-gray-600">
-                            <li className="flex items-center gap-2"><div className="w-2 h-2 bg-orange-500 rounded-full"></div>Innovative learning program design</li>
-                            <li className="flex items-center gap-2"><div className="w-2 h-2 bg-orange-500 rounded-full"></div>Teacher training workshops</li>
-                            <li className="flex items-center gap-2"><div className="w-2 h-2 bg-orange-500 rounded-full"></div>Student mentorship initiatives</li>
-                            <li className="flex items-center gap-2"><div className="w-2 h-2 bg-orange-500 rounded-full"></div>Educational technology integration</li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  )}
-                  {selectedMember === 'zain' && (
-                    <div>
-                      <div className="flex items-center gap-4 mb-6">
-                        <div className="w-16 h-16 rounded-full bg-gradient-to-br from-indigo-400 to-blue-500 p-1">
-                          <div className="w-full h-full rounded-full bg-gray-200 flex items-center justify-center text-2xl font-bold text-gray-600">👨‍⚡</div>
-                        </div>
-                        <div>
-                          <h3 className="text-2xl font-bold text-gray-800">Mohsin</h3>
-                          <p className="text-indigo-600 font-medium">Energy Lab Director</p>
-                        </div>
-                      </div>
-                      <div className="grid md:grid-cols-2 gap-6">
-                        <div>
-                          <h4 className="font-semibold text-gray-800 mb-3">Background & Expertise:</h4>
-                          <ul className="space-y-2 text-gray-600">
-                            <li className="flex items-center gap-2"><div className="w-2 h-2 bg-indigo-500 rounded-full"></div>Renewable Energy Engineering</li>
-                            <li className="flex items-center gap-2"><div className="w-2 h-2 bg-indigo-500 rounded-full"></div>Solar power systems specialist</li>
-                            <li className="flex items-center gap-2"><div className="w-2 h-2 bg-indigo-500 rounded-full"></div>Remote area electrification expert</li>
-                            <li className="flex items-center gap-2"><div className="w-2 h-2 bg-indigo-500 rounded-full"></div>Sustainable technology innovator</li>
-                          </ul>
-                        </div>
-                        <div>
-                          <h4 className="font-semibold text-gray-800 mb-3">Current Projects:</h4>
-                          <ul className="space-y-2 text-gray-600">
-                            <li className="flex items-center gap-2"><div className="w-2 h-2 bg-indigo-500 rounded-full"></div>Solar power solutions for communities</li>
-                            <li className="flex items-center gap-2"><div className="w-2 h-2 bg-indigo-500 rounded-full"></div>Energy efficiency programs</li>
-                            <li className="flex items-center gap-2"><div className="w-2 h-2 bg-indigo-500 rounded-full"></div>Renewable energy education</li>
-                            <li className="flex items-center gap-2"><div className="w-2 h-2 bg-indigo-500 rounded-full"></div>Mountain community electrification</li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  )}
 
-                  <div className="mt-6 text-center">
-                    <button 
-                      onClick={() => setSelectedMember(null)}
-                      className="bg-gray-600 text-white px-6 py-2 rounded-lg hover:bg-gray-700 transition-colors duration-300"
-                    >
-                      Close Details
-                    </button>
-                  </div>
-                </div>
-              </div>
-            )}
 
             {/* Team Members Grid */}
             <div className="relative">
@@ -242,7 +90,7 @@ export default function TeamPage() {
               
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto animate-fade-in-up">
                 {/* Team Member 1 - CTO */}
-                <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 ease-out transform hover:scale-105 hover:bg-gradient-to-br hover:from-purple-50 hover:to-purple-100 group text-center max-w-sm mx-auto cursor-pointer" onClick={() => setSelectedMember(selectedMember === 'jane' ? null : 'jane')}>
+                <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 ease-out transform hover:scale-105 hover:bg-gradient-to-br hover:from-purple-50 hover:to-purple-100 group text-center max-w-sm mx-auto">
                   <div className="relative mb-6">
                     <div className="w-40 h-40 mx-auto rounded-full bg-gradient-to-br from-purple-400 to-pink-500 p-1 shadow-lg hover:w-44 hover:h-44 transition-all duration-300 ease-in-out">
                       <img 
@@ -252,16 +100,16 @@ export default function TeamPage() {
                       />
                     </div>
                     <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-medium">
-                      CTO
+                      Team Member
                     </div>
                   </div>
                   <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-purple-800 transition-colors duration-300">Sohail Karim</h3>
-                  <p className="text-purple-600 font-medium mb-3">Chief Technology Officer</p>
+                  <p className="text-purple-600 font-medium mb-3">Data Science Student | GIKI Institute</p>
                   <p className="text-gray-600 text-sm mb-4 leading-relaxed">
-                    Tech innovator specializing in robotics and AI. Leading our technical initiatives and lab development programs.
+                    "I've always been curious about how technology can make life better. Lately, I've been diving into the world of AI and machine learning. It's all new to me, but I'm genuinely excited to learn and grow. Being part of Makeistan gives me the chance to explore these areas, contribute to real projects, and turn my interest into something meaningful."
                   </p>
                   <a 
-                    href="https://linkedin.com/in/janesmith" 
+                    href="https://www.linkedin.com/in/sohail-karim-a7902a200" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center w-10 h-10 bg-purple-600 text-white rounded-full hover:bg-purple-700 transition-colors duration-300 hover:scale-110 transform"
@@ -272,28 +120,30 @@ export default function TeamPage() {
                   </a>
                 </div>
 
-                {/* Team Member 2 - Climate Lab Director */}
-                <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 ease-out transform hover:scale-105 hover:bg-gradient-to-br hover:from-green-50 hover:to-green-100 group text-center max-w-sm mx-auto cursor-pointer" onClick={() => setSelectedMember(selectedMember === 'ahmed' ? null : 'ahmed')}>
+                {/* Team Member 2 - Malayika */}
+                <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 ease-out transform hover:scale-105 hover:bg-gradient-to-br hover:from-pink-50 hover:to-rose-100 group text-center max-w-sm mx-auto">
                   <div className="relative mb-6">
-                    <div className="w-40 h-40 mx-auto rounded-full bg-gradient-to-br from-green-400 to-teal-500 p-1 shadow-lg hover:w-44 hover:h-44 transition-all duration-300 ease-in-out">
-                      <div className="w-full h-full rounded-full bg-gray-200 flex items-center justify-center text-4xl font-bold text-gray-600">
-                        👨‍🔬
-                      </div>
+                    <div className="w-40 h-40 mx-auto rounded-full bg-gradient-to-br from-pink-400 to-rose-500 p-1 shadow-lg hover:w-44 hover:h-44 transition-all duration-300 ease-in-out">
+                      <img 
+                        src="/images/team/malaika.jpg" 
+                        alt="Malayika Mashroof Khan" 
+                        className="w-full h-full rounded-full object-cover object-center"
+                      />
                     </div>
-                    <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium">
-                      Lab Director
+                    <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 bg-pink-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                      Team Member
                     </div>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-green-800 transition-colors duration-300">Malaika Khan</h3>
-                  <p className="text-green-600 font-medium mb-3">Climate Lab Director</p>
+                  <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-pink-800 transition-colors duration-300">Malayika Mashroof Khan</h3>
+                  <p className="text-pink-600 font-medium mb-3">Electrical Engineering Student | Purpose-Driven Innovator</p>
                   <p className="text-gray-600 text-sm mb-4 leading-relaxed">
-                    Environmental engineer focused on sustainable solutions. Leading climate innovation projects and community outreach.
+                    "With every circuit I design and every system I build, I aim to bring ideas to life. I'm passionate about applying technology to solve real-world challenges — smart, scalable, and sustainable."
                   </p>
                   <a 
-                    href="https://linkedin.com/in/ahmedkhan" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center w-10 h-10 bg-green-600 text-white rounded-full hover:bg-green-700 transition-colors duration-300 hover:scale-110 transform"
+                    href="#" 
+                    onClick={(e) => e.preventDefault()}
+                    className="inline-flex items-center justify-center w-10 h-10 bg-gray-400 text-white rounded-full cursor-not-allowed"
+                    title="LinkedIn profile coming soon"
                   >
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clipRule="evenodd" />
@@ -302,27 +152,29 @@ export default function TeamPage() {
                 </div>
 
                 {/* Team Member 3 - Head of Education */}
-                <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 ease-out transform hover:scale-105 hover:bg-gradient-to-br hover:from-orange-50 hover:to-orange-100 group text-center max-w-sm mx-auto cursor-pointer" onClick={() => setSelectedMember(selectedMember === 'sarah' ? null : 'sarah')}>
+                <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 ease-out transform hover:scale-105 hover:bg-gradient-to-br hover:from-orange-50 hover:to-orange-100 group text-center max-w-sm mx-auto">
                   <div className="relative mb-6">
                     <div className="w-40 h-40 mx-auto rounded-full bg-gradient-to-br from-orange-400 to-red-500 p-1 shadow-lg hover:w-44 hover:h-44 transition-all duration-300 ease-in-out">
-                      <div className="w-full h-full rounded-full bg-gray-200 flex items-center justify-center text-4xl font-bold text-gray-600">
-                        👩‍🎓
-                      </div>
+                      <img 
+                        src="/images/team/yazdan.jpg" 
+                        alt="Yazdan Ali Khan" 
+                        className="w-full h-full rounded-full object-cover object-center"
+                      />
                     </div>
                     <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-medium">
-                      Education Lead
+                      Team Member
                     </div>
                   </div>
                   <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-orange-800 transition-colors duration-300">Yazdan Ali Khan</h3>
-                  <p className="text-orange-600 font-medium mb-3">Head of Education</p>
+                  <p className="text-orange-600 font-medium mb-3">Electrical Engineering Student | GIKI Institute</p>
                   <p className="text-gray-600 text-sm mb-4 leading-relaxed">
-                    Education specialist designing innovative learning programs. Passionate about STEM education and community development.
+                    "I humbly attempt within my best efforts to design, build, and innovate with a focus on real-world application. As an electrical engineering student, I'm passionate about creating smart, efficient, and sustainable systems that solve problems and drive progress."
                   </p>
                   <a 
-                    href="https://linkedin.com/in/sarahali" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center w-10 h-10 bg-orange-600 text-white rounded-full hover:bg-orange-700 transition-colors duration-300 hover:scale-110 transform"
+                    href="#" 
+                    onClick={(e) => e.preventDefault()}
+                    className="inline-flex items-center justify-center w-10 h-10 bg-gray-400 text-white rounded-full cursor-not-allowed"
+                    title="LinkedIn profile coming soon"
                   >
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clipRule="evenodd" />
@@ -331,27 +183,29 @@ export default function TeamPage() {
                 </div>
 
                 {/* Team Member 4 - Energy Lab Director */}
-                <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 ease-out transform hover:scale-105 hover:bg-gradient-to-br hover:from-indigo-50 hover:to-indigo-100 group text-center max-w-sm mx-auto cursor-pointer" onClick={() => setSelectedMember(selectedMember === 'zain' ? null : 'zain')}>
+                <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 ease-out transform hover:scale-105 hover:bg-gradient-to-br hover:from-indigo-50 hover:to-indigo-100 group text-center max-w-sm mx-auto">
                   <div className="relative mb-6">
                     <div className="w-40 h-40 mx-auto rounded-full bg-gradient-to-br from-indigo-400 to-blue-500 p-1 shadow-lg hover:w-44 hover:h-44 transition-all duration-300 ease-in-out">
-                      <div className="w-full h-full rounded-full bg-gray-200 flex items-center justify-center text-4xl font-bold text-gray-600">
-                        👨‍⚡
-                      </div>
+                      <img 
+                        src="/images/team/mohsin.jpg" 
+                        alt="Mohsin" 
+                        className="w-full h-full rounded-full object-cover object-center"
+                      />
                     </div>
                     <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 bg-indigo-500 text-white px-3 py-1 rounded-full text-sm font-medium">
-                      Energy Lead
+                      Team Member
                     </div>
                   </div>
                   <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-indigo-800 transition-colors duration-300">Mohsin</h3>
-                  <p className="text-indigo-600 font-medium mb-3">Energy Lab Director</p>
+                  <p className="text-indigo-600 font-medium mb-3">Computer Engineering Graduate | COMSATS Islamabad</p>
                   <p className="text-gray-600 text-sm mb-4 leading-relaxed">
-                    Renewable energy expert developing sustainable power solutions for mountain communities and remote areas.
+                    "I am a Computer Engineering graduate from COMSATS University Islamabad with a deep passion for technology, innovation, and problem-solving. With a strong foundation in both hardware and software systems, I focus on developing efficient, reliable, and scalable solutions. My academic background and hands-on project experience have equipped me with skills in programming, embedded systems, IoT applications, and system optimization. I'm driven by a curiosity to explore emerging technologies and a strong commitment to delivering impactful results, which I believe makes me a valuable contributor to any tech-driven initiative."
                   </p>
                   <a 
-                    href="https://linkedin.com/in/zainhassan" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center w-10 h-10 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 transition-colors duration-300 hover:scale-110 transform"
+                    href="#" 
+                    onClick={(e) => e.preventDefault()}
+                    className="inline-flex items-center justify-center w-10 h-10 bg-gray-400 text-white rounded-full cursor-not-allowed"
+                    title="LinkedIn profile coming soon"
                   >
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clipRule="evenodd" />
@@ -373,7 +227,7 @@ export default function TeamPage() {
               </p>
               <div className="flex justify-center">
                 <a 
-                  href="mailto:careers@makeistan.org" 
+                  href="mailto:Info@makeistan.com" 
                   className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-full hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
                 >
                   <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

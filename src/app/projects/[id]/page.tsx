@@ -6,7 +6,7 @@ import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import BackButton from '@/components/BackButton';
-import { ArrowLeft, MapPin, ChevronLeft, ChevronRight } from 'lucide-react';
+import { MapPin, ChevronLeft, ChevronRight, ExternalLink } from 'lucide-react';
 
 // ReadMore component for handling long text
 const ReadMore = ({ text, maxLength = 150 }: { text: string; maxLength?: number }) => {
@@ -29,8 +29,27 @@ const ReadMore = ({ text, maxLength = 150 }: { text: string; maxLength?: number 
   );
 };
 
+// Define interfaces for better type safety
+interface Project {
+  id: string;
+  title: string;
+  [key: string]: any;
+}
+
+interface ProjectStep {
+  title: string;
+  description: string;
+}
+
+interface ProjectItem {
+  title: string;
+  challenge?: string;
+  description: string;
+  focus?: string;
+}
+
 // ProjectSlideshow component for projects with multiple images
-const ProjectSlideshow = ({ project }: { project: any }) => {
+const ProjectSlideshow = ({ project }: { project: Project }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   
   // Safety check for project object
@@ -40,7 +59,34 @@ const ProjectSlideshow = ({ project }: { project: any }) => {
   
   // Define slides based on project ID
   const getSlides = () => {
-    if (project.id === '2') {
+    if (project.id === '1') {
+      return [
+        {
+          image: "/images/projects/E1.jpeg",
+          title: project.title,
+          subtitle: project.subtitle,
+          description: "Digital skills training for youth empowerment"
+        },
+        {
+          image: "/images/projects/E2.jpeg",
+          title: project.title,
+          subtitle: project.subtitle,
+          description: "Creating sustainable employment opportunities"
+        },
+        {
+          image: "/images/projects/E3.jpeg",
+          title: project.title,
+          subtitle: project.subtitle,
+          description: "Freelancing and entrepreneurship development"
+        },
+        {
+          image: "/images/projects/E4.jpeg",
+          title: project.title,
+          subtitle: project.subtitle,
+          description: "Community tech centers and innovation hubs"
+        }
+      ];
+    } else if (project.id === '2') {
        return [
          {
            image: "/images/projects/housing1.jpg",
@@ -70,31 +116,82 @@ const ProjectSlideshow = ({ project }: { project: any }) => {
           description: "Professional installation of solar-powered water systems in rural communities"
         }
       ];
+    } else if (project.id === '4') {
+      return [
+        {
+          image: "/images/fellowship/K1.jpg",
+          title: project.title,
+          subtitle: project.subtitle,
+          description: "Innovation and design thinking workshops at KIU"
+        },
+        {
+          image: "/images/fellowship/K2.jpeg",
+          title: project.title,
+          subtitle: project.subtitle,
+          description: "Students building innovative solutions with cutting-edge technology"
+        },
+        {
+          image: "/images/fellowship/K3.jpg",
+          title: project.title,
+          subtitle: project.subtitle,
+          description: "Collaborative learning and prototype development"
+        }
+      ];
     } else if (project.id === '5') {
       return [
         {
-          image: "/images/projects/Robotics1.png?v=2",
+          image: "/images/projects/Robotics1.jpeg",
           title: project.title,
           subtitle: project.subtitle,
           description: "Advanced robotics training for community development"
         },
         {
-          image: "/images/projects/Robotics2.jpeg?v=2",
+          image: "/images/projects/Robotics2.jpeg",
           title: project.title,
           subtitle: project.subtitle,
           description: "Hands-on robotics workshops for students"
         },
         {
-          image: "/images/projects/Robotics3.png?v=2",
+          image: "/images/projects/Robotics3.jpeg",
           title: project.title,
           subtitle: project.subtitle,
           description: "Building innovative robotics solutions"
         },
         {
-          image: "/images/projects/Robotics4.png?v=2",
+          image: "/images/projects/Robotics4.jpeg",
           title: project.title,
           subtitle: project.subtitle,
           description: "Community robotics program achievements"
+        },
+        {
+          image: "/images/projects/Robotics5.jpeg",
+          title: project.title,
+          subtitle: project.subtitle,
+          description: "Collaborative robotics learning environment"
+        },
+        {
+          image: "/images/projects/Robotics6.jpeg",
+          title: project.title,
+          subtitle: project.subtitle,
+          description: "Robotics innovation and creativity showcase"
+        },
+        {
+          image: "/images/projects/Robotics7.jpeg",
+          title: project.title,
+          subtitle: project.subtitle,
+          description: "Technical skills development in robotics"
+        },
+        {
+          image: "/images/projects/Robotics8.jpeg",
+          title: project.title,
+          subtitle: project.subtitle,
+          description: "Community engagement through robotics"
+        },
+        {
+          image: "/images/projects/Robotics9.jpeg",
+          title: project.title,
+          subtitle: project.subtitle,
+          description: "Future leaders in robotics and technology"
         }
        ];
     }
@@ -103,9 +200,24 @@ const ProjectSlideshow = ({ project }: { project: any }) => {
   
   const slides = getSlides();
   
+  // Debug logging
+  console.log('Project ID:', project.id);
+  console.log('Slides:', slides);
+  
   // Safety check for slides
   if (!slides || slides.length === 0) {
-    return <div className="text-white text-center p-8">No slides available</div>;
+    return (
+      <div className="relative h-[700px] w-full bg-gradient-to-r from-blue-600 to-blue-800 flex items-center justify-center">
+        <div className="text-center text-white max-w-4xl px-4">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 drop-shadow-lg">
+            {project.title}
+          </h1>
+          <p className="text-xl md:text-2xl drop-shadow-md">
+            {project.subtitle}
+          </p>
+        </div>
+      </div>
+    );
   }
 
   useEffect(() => {
@@ -124,7 +236,7 @@ const ProjectSlideshow = ({ project }: { project: any }) => {
   };
 
   return (
-    <div className="relative h-[500px] w-full overflow-hidden">
+    <div className="relative h-[700px] w-full overflow-hidden">
       {/* Background Images */}
       {slides.map((slide, index) => (
         <div
@@ -196,14 +308,126 @@ const ProjectSlideshow = ({ project }: { project: any }) => {
   );
 };
 
+// FellowshipSlideshow component for fellowship projects
+const FellowshipSlideshow = ({ project }: { project: Project }) => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
+  
+  // Fellowship images based on project ID
+  const fellowshipImages = project.id === '4' ? [
+    '/images/fellowship/K1.jpg',
+    '/images/fellowship/K2.jpeg',
+    '/images/fellowship/K3.jpg'
+  ] : [
+    '/images/fellowship/f1.JPG',
+    '/images/fellowship/f2.JPG',
+    '/images/fellowship/f3.JPG',
+    '/images/fellowship/f4.JPG',
+    '/images/fellowship/f5.JPG',
+    '/images/fellowship/f6.JPG',
+    '/images/fellowship/f7.JPG'
+  ];
+
+  useEffect(() => {
+    if (!isHovered) {
+      const timer = setInterval(() => {
+        setCurrentSlide((prev) => (prev + 1) % fellowshipImages.length);
+      }, 5000);
+      return () => clearInterval(timer);
+    }
+  }, [isHovered, fellowshipImages.length]);
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % fellowshipImages.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + fellowshipImages.length) % fellowshipImages.length);
+  };
+
+  return (
+    <div 
+      className="relative h-[700px] w-full overflow-hidden"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      {/* Background Images */}
+      {fellowshipImages.map((image, index) => (
+        <div
+          key={index}
+          className={`absolute inset-0 transition-opacity duration-1000 ${
+            index === currentSlide ? 'opacity-100' : 'opacity-0'
+          }`}
+        >
+          <Image
+            src={image}
+            alt={`Fellowship image ${index + 1}`}
+            fill
+            className="object-cover object-center"
+            priority={index === 0}
+            quality={95}
+            sizes="100vw"
+            style={{
+              objectFit: 'cover',
+              objectPosition: 'center'
+            }}
+          />
+        </div>
+      ))}
+      <div className="absolute inset-0 bg-black/40" />
+      
+      {/* Navigation Arrows */}
+      <button
+        onClick={prevSlide}
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-all duration-300 z-10"
+      >
+        <ChevronLeft size={24} />
+      </button>
+      
+      <button
+        onClick={nextSlide}
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-all duration-300 z-10"
+      >
+        <ChevronRight size={24} />
+      </button>
+
+      {/* Content */}
+      <div className="absolute inset-0 flex items-center justify-center">
+        <div className="text-center text-white max-w-4xl px-4">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 drop-shadow-lg transition-all duration-500">
+            {project.title}
+          </h1>
+          <p className="text-xl md:text-2xl drop-shadow-md transition-all duration-500">
+            {project.subtitle}
+          </p>
+        </div>
+      </div>
+
+      {/* Slide Indicators */}
+      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-2">
+        {fellowshipImages.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentSlide(index)}
+            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+              index === currentSlide ? 'bg-white' : 'bg-white/50'
+            }`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
+
 interface ProjectPageProps {
   params: Promise<{
     id: string;
   }>;
 }
 
-const projectData: { [key: string]: any } = {
+const projectData: { [key: string]: Project } = {
   '1': {
+    id: '1',
     title: "E-Rozgar Program Gilgit Baltistan",
     subtitle: "Powered by Makeistan",
     location: "Gilgit Baltistan, Pakistan",
@@ -364,6 +588,101 @@ const projectData: { [key: string]: any } = {
       "Technical skill development programs",
       "Innovation and creativity training"
     ]
+  },
+  '6': {
+    id: '6',
+    title: 'Gilgit-Baltistan Climate Fellowship',
+    subtitle: 'A 10-day human-centered design program in Gilgit-Baltistan',
+    location: 'Various valleys of Gilgit-Baltistan',
+    beneficiaries: '30 international + 10 local participants',
+    status: 'Active',
+    description: 'The Gilgit-Baltistan Design Fellowship is a 10-day human-centered design program that aims to bring together people from diverse backgrounds and experiences to participate in a hands-on experience in Gilgit-Baltistan. The goal of the fellowship is to upskill and connect changemakers, innovators, artists, students, and teachers with the local communities of Gilgit-Baltistan. Participants will collaborate to co-design and co-create solutions to some of the serious challenges faced by the residents of the region.',
+    approach: 'This hands-on fellowship will teach design thinking and local innovation to the participants. Participants will have the opportunity to work in a makerspace, where they will build functional prototypes. They will engage directly with the community, staying with local families to gain a better understanding of user needs and challenges. The fellowship brings together 30 international and national participants, as well as 10 local participants from the communities of Gilgit-Baltistan working together as a team on six different projects.',
+    methodology: 'We use community-centered design thinking with participatory research. Our process includes iterative prototyping, local knowledge integration, and sustainable impact measurement.',
+    goals: [
+      'Upskill and connect changemakers, innovators, artists, students, and teachers',
+      'Collaborate with local communities of Gilgit-Baltistan',
+      'Co-design and co-create solutions to serious regional challenges',
+      'Teach design thinking and local innovation',
+      'Build functional prototypes in makerspace',
+      'Engage directly with community through homestays'
+    ],
+    projects: [
+      {
+        title: 'Gulmit Carpet Centre',
+        challenge: 'How might we improve the efficiency of the carpet-making unit in Gulmit?',
+        description: 'Korgah is a women-run carpet weaving center located in Gulmit, Gojal, Upper Hunza. Established in 2005, it began with the efforts of around 18 women who sought to create a space for weaving traditional, pure handmade carpets, rugs, and handcrafting embroidered purses and wallets.',
+        focus: 'The team will collaborate with the artisans to research trends in Pakistan, assist in setting up an online store and help scale up their business using local resources, incorporating local designs, culture, and the most in-demand styles in the market.'
+      },
+      {
+        title: 'Al-Amin Model School Gulmit',
+        challenge: 'How might we integrate a modern practical learning system into the education system of Al-Amin Model School Gulmit?',
+        description: 'Al-Amin Model School & College in Gulmit was established on September 21, 1991. It is an initiative of the Gulmit Educational and Social Welfare Society (GESWS), a registered community-based organization dedicated to improving the quality of life through educational and developmental activities.',
+        focus: 'The team will work with teachers and students to assess their current models and collaboratively design a curriculum focused on STEM, hands-on activities, and new learning methods, working on prototypes with students and teachers.'
+      },
+      {
+        title: 'Fruit Jam Centre Nagar',
+        challenge: 'How might we improve the jam-making process to ensure that the new methods are both efficient and hygienic?',
+        description: 'Nestled in the picturesque Nagar Valley, Mamobar Organics is a charming small business operated by dedicated community members. This venture crafts jams, fragrant oils, and soothing green teas using organic methods and local fruits.',
+        focus: 'The team will collaborate to improve the jam-making process, ensuring new methods are efficient and hygienic while maintaining the organic nature of products and supporting community food preservation.'
+      },
+      {
+        title: 'Women Artisans',
+        challenge: 'How might we enhance the local handicraft projects of Hunza, helping local women artisans build products that are viable, scalable, eco-friendly, and profitable?',
+        description: 'In Hunza Valley, women artisans and entrepreneurs play a crucial role in economic activities. These women have strong command of the handicraft industry, creating exceptional designs with international recognition, boosted by tourism and online business.',
+        focus: 'Co-design products, introduce new flavors and colors, conduct user research for market needs and demands, enabling artisans to boost sales and enhance local handicraft projects.'
+      },
+      {
+        title: 'Glaciers',
+        challenge: 'What steps can we take to save the melting glaciers?',
+        description: 'Glaciers in Gilgit-Baltistan are melting rapidly due to climate change, raising concerns about glacial lake outburst floods (GLOFs) as new lakes form from meltwater, posing threats to inhabitants and ecosystem.',
+        focus: 'Work with the local Passu community to find solutions to decrease glacier melting and suggest ways for community collaboration in efforts to save glaciers and prevent accelerated melting.'
+      }
+    ],
+    process: [
+       'Information gathering',
+       'Problem framing', 
+       'Field and community visits',
+       'Idea generation',
+       'Sketch modeling',
+       'Field and community review',
+       'Prototype',
+       'Solution refinement',
+       'Community showcase',
+       'Continuity planning'
+     ],
+     selectionProcess: {
+       overview: 'Individuals who wish to participate in this program must undergo a thorough selection process designed to ensure the best candidates are chosen.',
+       steps: [
+         {
+           step: 'Application Form',
+           description: 'Applicants complete a comprehensive application form, providing detailed information about their backgrounds, skills, and aspirations.'
+         },
+         {
+           step: 'Interview',
+           description: 'Successful candidates are invited to attend an interview to showcase their unique qualities and potential contributions to the program.'
+         },
+         {
+           step: 'Final Selection',
+           description: 'A panel of independent jurors, consisting of experts in various fields, evaluates candidates to create a diverse and well-rounded team.'
+         }
+       ],
+       diversity: 'The committee aims to gather a harmonious mix of designers, innovators, artists, engineers, changemakers, educators, students, and teachers, ensuring that a variety of perspectives and expertise are represented. This approach enhances the program\'s collaborative environment and maximizes its potential for innovation and impact.'
+     },
+    impact: [
+      'Cross-cultural collaboration and knowledge exchange',
+      'Community-driven innovation solutions',
+      'Capacity building in design thinking methodologies',
+      'Sustainable development through local engagement',
+      'Enhanced problem-solving skills for participants'
+    ],
+    keyFeatures: [
+      'Human-centered design methodology',
+      'Community homestay experiences',
+      'Makerspace prototype development',
+      'Cross-sector collaboration framework',
+      'Local innovation and design thinking training'
+    ]
   }
 };
 
@@ -395,8 +714,10 @@ export default function ProjectPage({ params }: ProjectPageProps) {
       <BackButton />
       
       {/* Hero Section */}
-      {(id === '2' || id === '3' || id === '5') ? (
+      {(id === '1' || id === '2' || id === '3' || id === '4' || id === '5') ? (
         <ProjectSlideshow project={project} />
+      ) : id === '6' ? (
+        <FellowshipSlideshow project={project} />
       ) : (
         <div className="relative h-[400px] w-full bg-gradient-to-r from-blue-600 to-blue-800">
           <div className="absolute inset-0 bg-black/20" />
@@ -413,16 +734,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
         </div>
       )}
 
-      {/* Back Button */}
-      <div className="max-w-6xl mx-auto px-4 py-6">
-        <Link 
-          href="/" 
-          className="inline-flex items-center gap-1 bg-blue-600 text-white px-3 py-1.5 rounded-md hover:bg-blue-700 transition-colors duration-300 text-sm font-medium shadow-sm hover:shadow-md"
-        >
-          <ArrowLeft size={14} />
-          Back to Home
-        </Link>
-      </div>
+
 
       {/* Project Details */}
       <div className="max-w-6xl mx-auto px-4 pb-16">
@@ -491,7 +803,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
             {project.methodology && (
               <section>
                 <h2 className="text-3xl font-bold text-gray-800 mb-6">Our Methodology</h2>
-                <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+                <div className="bg-gray-50 rounded-lg p-6">
                   <p className="text-gray-700 leading-relaxed text-lg">
                     <ReadMore text={project.methodology} maxLength={180} />
                   </p>
@@ -581,6 +893,92 @@ export default function ProjectPage({ params }: ProjectPageProps) {
               </section>
             )}
 
+            {/* Fellowship Projects */}
+            {project.projects && (
+              <section>
+                <div className="bg-blue-600 rounded-lg p-6 text-white mb-6">
+                  <h2 className="text-3xl font-bold mb-2">Fellowship Projects</h2>
+                  <p className="text-white/90 text-lg">Six transformative projects addressing real community challenges</p>
+                </div>
+                
+                <div className="space-y-6">
+                  {project.projects.map((proj: ProjectItem, index: number) => (
+                    <div key={index} className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                      <div className="flex items-start gap-4">
+                        <div className="bg-blue-500 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg flex-shrink-0">
+                          {index + 1}
+                        </div>
+                        <div className="flex-1">
+                          <h3 className="text-xl font-bold text-gray-800 mb-2">{proj.title}</h3>
+                          <div className="bg-yellow-50 border-l-4 border-yellow-400 rounded p-3 mb-3">
+                            <p className="text-gray-700 font-medium italic">{proj.challenge}</p>
+                          </div>
+                          <p className="text-gray-700 leading-relaxed mb-3">{proj.description}</p>
+                          <div className="bg-blue-50 border-l-4 border-blue-400 rounded p-3">
+                            <p className="text-gray-700 font-medium">{proj.focus}</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            )}
+
+            {/* Fellowship Process */}
+             {project.process && (
+               <section>
+                 <h2 className="text-3xl font-bold text-gray-800 mb-6">Fellowship Process</h2>
+                 <div className="bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200 rounded-lg p-6">
+                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                     {project.process.map((step: string, index: number) => (
+                       <div key={index} className="bg-white rounded-lg p-4 shadow-sm">
+                         <div className="flex items-center gap-3">
+                           <div className="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm flex-shrink-0">
+                             {index + 1}
+                           </div>
+                           <p className="text-gray-700 font-medium">{step}</p>
+                         </div>
+                       </div>
+                     ))}
+                   </div>
+                 </div>
+               </section>
+             )}
+
+             {/* Selection Process */}
+             {project.selectionProcess && (
+               <section>
+                 <h2 className="text-3xl font-bold text-gray-800 mb-6">Selection Process</h2>
+                 <div className="space-y-6">
+                   <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+                     <p className="text-gray-700 leading-relaxed text-lg">{project.selectionProcess.overview}</p>
+                   </div>
+                   
+                   <div className="space-y-4">
+                     {project.selectionProcess.steps.map((step: ProjectStep, index: number) => (
+                       <div key={index} className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                         <div className="flex items-start gap-4">
+                           <div className="bg-green-100 text-green-600 rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg flex-shrink-0">
+                             {index + 1}
+                           </div>
+                           <div className="flex-1">
+                             <h3 className="text-xl font-bold text-gray-800 mb-2">{step.step}</h3>
+                             <p className="text-gray-700 leading-relaxed">{step.description}</p>
+                           </div>
+                         </div>
+                       </div>
+                     ))}
+                   </div>
+                   
+                   <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+                     <h3 className="text-lg font-bold text-gray-800 mb-3">Diversity & Team Composition</h3>
+                     <p className="text-gray-700 leading-relaxed">{project.selectionProcess.diversity}</p>
+                   </div>
+                 </div>
+               </section>
+             )}
+
             {/* Impact Section */}
             <section>
               <h2 className="text-3xl font-bold text-gray-800 mb-6">Impact & Results</h2>
@@ -616,17 +1014,27 @@ export default function ProjectPage({ params }: ProjectPageProps) {
               </div>
             </section>
 
-            {/* Call to Action */}
-            <section className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-              <h3 className="text-xl font-bold text-gray-800 mb-3">Get Involved</h3>
-              <p className="text-gray-600 mb-4">Interested in similar projects or want to collaborate?</p>
-              <Link 
-                href="/#contact" 
-                className="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-300 inline-block"
-              >
-                Contact Us
-              </Link>
-            </section>
+
+          </div>
+        </div>
+        
+        {/* Call to Action Section */}
+        <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-8 md:p-12 text-center mt-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+            Want to Collaborate?
+          </h2>
+          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+            We&apos;re always looking for partners, volunteers, and supporters to help us expand our impact. 
+            Join us in creating positive change in communities across Pakistan.
+          </p>
+          <div className="flex justify-center">
+            <a
+              href="mailto:Info@makeistan.com?subject=Inquiry about Makeistan Projects&body=Hello Makeistan team,%0D%0A%0D%0AI am interested in learning more about your projects and would like to get in touch.%0D%0A%0D%0AThank you!"
+              className="bg-blue-600 text-white px-8 py-4 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-300 flex items-center justify-center gap-2"
+            >
+              Get In Touch
+              <ExternalLink size={18} />
+            </a>
           </div>
         </div>
       </div>

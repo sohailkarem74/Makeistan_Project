@@ -116,7 +116,7 @@ export default function Hero() {
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
-        <h1 className={`text-6xl md:text-7xl font-bold text-white mb-6 transition-all duration-700 ease-out transform ${
+        <h1 className={`text-6xl md:text-7xl font-bold text-white mb-6 transition-all duration-700 ease-out transform tracking-wider ${
           isHovered ? 'scale-105 text-shadow-lg' : 'scale-100'
         }`}>
           MAKEISTAN Official
