@@ -2,14 +2,27 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
+
+interface DropdownItem {
+  name: string;
+  href: string;
+  icon: string;
+  title?: string;
+  target?: string;
+}
+
+interface NavItem {
+  name: string;
+  href?: string;
+  dropdown?: DropdownItem[];
+}
 
 export default function Navbar() {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [hoverTimeout, setHoverTimeout] = useState<NodeJS.Timeout | null>(null);
 
-const navItems = [
+const navItems: NavItem[] = [
     {
       name: 'Home',
       href: '/'
@@ -49,11 +62,9 @@ const navItems = [
             {/* Logo - Left Side */}
             <div className="flex items-center h-full">
               <Link href="/" className="flex items-center">
-                <Image 
+                <img 
                   src="/images/logo/llogo.png" 
                   alt="MAKEISTAN" 
-                  width={160}
-                  height={160}
                   className="h-40 w-auto"
                 />
               </Link>
@@ -102,7 +113,7 @@ const navItems = [
                         }}
                       >
                         <div className="py-2">
-                          {item.dropdown.map((dropdownItem) => (
+                          {item.dropdown.map((dropdownItem, index) => (
                             <Link
                               key={dropdownItem.name}
                               href={dropdownItem.href}

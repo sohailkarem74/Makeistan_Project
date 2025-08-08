@@ -125,7 +125,7 @@ export default function Hero() {
           <p className={`text-2xl md:text-3xl text-white font-light transition-all duration-500 ease-out transform ${
             isHovered ? 'translate-y-[-4px] scale-102' : 'translate-y-0 scale-100'
           }`}>
-            Gilgit Baltistan&apos;s First Ever Makerspace
+            Gilgit Baltistan's First Ever Makerspace
           </p>
           <p className={`text-xl md:text-2xl text-white font-light mb-8 transition-all duration-500 ease-out transform delay-100 ${
             isHovered ? 'translate-y-[-4px] scale-102' : 'translate-y-0 scale-100'

@@ -19,7 +19,7 @@ export default function AboutUs() {
               </svg>
             </div>
             <h2 className="text-4xl font-bold text-gray-800 mb-4">Welcome to Makeistan</h2>
-            <h3 className="text-2xl font-semibold text-blue-600 mb-4">Gilgit Baltistan&apos;s First Ever Makerspace</h3>
+            <h3 className="text-2xl font-semibold text-blue-600 mb-4">Gilgit Baltistan's First Ever Makerspace</h3>
             <p className="text-xl text-gray-600 font-medium mb-6">Where Ideas Come Alive</p>
             <div className="flex items-center justify-center mb-6">
               <div className="w-2 h-2 bg-blue-400 rounded-full mx-1"></div>
@@ -48,14 +48,14 @@ export default function AboutUs() {
                 <div className="text-3xl mb-4">🚀</div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-3">Innovation Hub</h3>
                 <p className="text-gray-700 leading-relaxed">
-                  Pakistan&apos;s first collaborative makerspace, built to empower people with tools, skills, and community needed to turn bold ideas into real-world solutions.
+                  Pakistan's first collaborative makerspace, built to empower people with tools, skills, and community needed to turn bold ideas into real-world solutions.
                 </p>
               </div>
               <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-2xl">
                 <div className="text-3xl mb-4">🌍</div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-3">Local Impact</h3>
                 <p className="text-gray-700 leading-relaxed">
-                  Rooted in Gilgit-Baltistan, we&apos;re addressing real challenges like energy access, climate resilience, and livelihood generation through hands-on learning.
+                  Rooted in Gilgit-Baltistan, we're addressing real challenges like energy access, climate resilience, and livelihood generation through hands-on learning.
                 </p>
               </div>
               <div className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-2xl">
@@ -102,7 +102,7 @@ export default function AboutUs() {
                 <h3 className="text-xl font-semibold text-gray-800 mb-3">Community Building</h3>
                 <p className="text-gray-700 leading-relaxed">
                   We create a vibrant ecosystem where like-minded individuals collaborate, share knowledge, 
-                  and support each other&apos;s innovative endeavors.
+                  and support each other's innovative endeavors.
                 </p>
               </div>
               <div className="bg-gradient-to-br from-orange-50 to-orange-100 p-6 rounded-2xl">
@@ -156,7 +156,7 @@ export default function AboutUs() {
                 <div className="w-1.5 h-1.5 bg-gray-400 rounded-full mx-1"></div>
               </div>
               <p className="text-gray-700 mb-6">
-                Ready to be part of Gilgit-Baltistan&apos;s innovation revolution? We&apos;d love to hear from you.
+                Ready to be part of Gilgit-Baltistan's innovation revolution? We'd love to hear from you.
               </p>
             </div>
             <div className="grid md:grid-cols-3 gap-8">

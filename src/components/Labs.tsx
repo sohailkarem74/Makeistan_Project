@@ -136,7 +136,7 @@ export default function Labs() {
           <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-white/20">
             <h3 className="text-2xl font-bold text-gray-800 mb-4">Ready to Innovate?</h3>
             <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-              Join our innovation ecosystem and be part of Gilgit-Baltistan&apos;s technological revolution.
+              Join our innovation ecosystem and be part of Gilgit-Baltistan's technological revolution.
             </p>
             <Link 
                href="/labs"

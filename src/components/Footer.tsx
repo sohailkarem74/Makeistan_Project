@@ -2,7 +2,6 @@
 
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -44,16 +43,14 @@ export default function Footer() {
           {/* Brand Section */}
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center group">
-              <Image 
+              <img 
                 src="/images/logo/llogo.png" 
                 alt="MAKEISTAN" 
-                width={80}
-                height={80}
                 className="h-20 w-auto hover:opacity-80 transition-opacity duration-300"
               />
             </Link>
             <p className="mt-4 text-gray-400 max-w-md">
-              Gilgit Baltistan&apos;s first makerspace, empowering innovators to build sustainable solutions 
+              Gilgit Baltistan's first makerspace, empowering innovators to build sustainable solutions 
               through robotics, AI, climate action, and green energy.
             </p>
             

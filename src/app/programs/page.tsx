@@ -6,7 +6,44 @@ import Footer from '../../components/Footer';
 import BackButton from '../../components/BackButton';
 import { ExternalLink, MapPin, Users, Calendar, Target, Lightbulb } from 'lucide-react';
 
-const fellowships = [
+interface SelectionStep {
+  title: string;
+  description: string;
+}
+
+interface SelectionProcess {
+  description: string;
+  steps: SelectionStep[];
+  diversity?: string;
+}
+
+interface Project {
+  title: string;
+  challenge: string;
+  description: string;
+  focus: string;
+}
+
+interface Fellowship {
+  id: number;
+  title: string;
+  description: string;
+  duration: string;
+  participants?: string;
+  location: string;
+  status: string;
+  statusColor: string;
+  image: string;
+  category: string;
+  goals?: string[];
+  projects?: Project[];
+  process?: string[];
+  selectionProcess?: SelectionProcess;
+  beneficiaries?: string;
+  impact?: string[];
+}
+
+const fellowships: Fellowship[] = [
   {
     id: 1,
     title: "Gilgit-Baltistan Climate Fellowship",
@@ -110,7 +147,7 @@ const fellowships = [
 ];
 
 export default function Programs() {
-  const [selectedFellowship, setSelectedFellowship] = useState(null);
+  const [selectedFellowship, setSelectedFellowship] = useState<Fellowship | null>(null);
 
   return (
     <main className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
@@ -410,7 +447,7 @@ export default function Programs() {
             Want to Collaborate?
           </h2>
           <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-            We&apos;re always looking for partners, volunteers, and supporters to help us expand our impact. 
+            We're always looking for partners, volunteers, and supporters to help us expand our impact. 
             Join us in creating positive change in communities across Pakistan.
           </p>
           <div className="flex justify-center">

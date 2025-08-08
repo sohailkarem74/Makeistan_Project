@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-
+import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import BackButton from '@/components/BackButton';
@@ -60,7 +60,7 @@ export default function RoboticsLab() {
               </p>
               {showFullText && (
                 <p className="mb-4">
-                  From building autonomous robots and smart IoT systems to developing drone solutions and immersive AR/VR experiences, we enable participants to experiment, prototype, and solve real-world challenges. Whether you&apos;re an educator designing future-ready curricula, a researcher exploring intelligent systems, or a startup developing tech-driven solutions, Makeistan offers the platform, expertise, and ecosystem to bring your ideas to life.
+                  From building autonomous robots and smart IoT systems to developing drone solutions and immersive AR/VR experiences, we enable participants to experiment, prototype, and solve real-world challenges. Whether you're an educator designing future-ready curricula, a researcher exploring intelligent systems, or a startup developing tech-driven solutions, Makeistan offers the platform, expertise, and ecosystem to bring your ideas to life.
                 </p>
               )}
               <button
@@ -122,7 +122,7 @@ export default function RoboticsLab() {
           <section className="mt-16 bg-gradient-to-r from-purple-50 to-blue-50 rounded-2xl p-8 text-center">
             <h3 className="text-2xl font-bold text-gray-800 mb-4">Want to Collaborate?</h3>
             <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-              Interested in partnering with our Robotics Lab or have a project idea? We&apos;d love to hear from you and explore how we can work together.
+              Interested in partnering with our Robotics Lab or have a project idea? We'd love to hear from you and explore how we can work together.
             </p>
             <div className="flex justify-center">
               <a
