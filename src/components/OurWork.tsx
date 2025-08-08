@@ -40,7 +40,7 @@ export default function OurWork() {
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-gray-800 mb-4 animate-fade-in-up">Our Work</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto animate-fade-in-up animation-delay-200">
-            Discover the impactful projects we've undertaken to create positive change in communities across Pakistan
+            Discover the impactful projects we&apos;ve undertaken to create positive change in communities across Pakistan
           </p>
         </div>
 

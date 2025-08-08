@@ -1,10 +1,11 @@
 "use client";
 
 import React from 'react';
+import Image from 'next/image';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 import BackButton from '@/components/BackButton';
-import { ExternalLink, Mail, MapPin, Briefcase } from 'lucide-react';
+// Removed unused imports
 
 export default function TeamPage() {
 
@@ -46,9 +47,11 @@ export default function TeamPage() {
               <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 ease-out transform hover:scale-105 hover:bg-gradient-to-br hover:from-blue-50 hover:to-blue-100 group text-center max-w-sm mx-auto">
                 <div className="relative mb-6">
                   <div className="w-40 h-40 mx-auto rounded-full bg-gradient-to-br from-blue-400 to-purple-500 p-1 shadow-lg">
-                    <img 
+                    <Image 
                       src="/images/team/ehsam.jpg" 
                       alt="Ehsam Ullah Baig" 
+                      width={160}
+                      height={160}
                       className="w-full h-full rounded-full object-cover object-center"
                     />
                   </div>
@@ -59,7 +62,7 @@ export default function TeamPage() {
                 <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-blue-800 transition-colors duration-300">Ehsam Ullah Baig</h3>
                 <p className="text-blue-600 font-medium mb-3">CEO & Founder</p>
                 <p className="text-gray-600 text-sm mb-4 leading-relaxed">
-                  "I've never believed that innovation belongs only in labs or big tech hubs. I believe it starts wherever someone dares to ask, 'What if we built something better?' That belief sparked Makeistan not as a typical startup, but as a space for young minds to explore, build, and create solutions that truly matter. Over the years, this journey has taken me into clean energy, climate tech, smart agriculture, and real world education across Pakistan. I'm still learning every step of the way. But I'm driven by the idea that meaningful change doesn't need to be massive it just needs to be made."
+                  &quot;I&apos;ve never believed that innovation belongs only in labs or big tech hubs. I believe it starts wherever someone dares to ask, &apos;What if we built something better?&apos; That belief sparked Makeistan not as a typical startup, but as a space for young minds to explore, build, and create solutions that truly matter. Over the years, this journey has taken me into clean energy, climate tech, smart agriculture, and real world education across Pakistan. I&apos;m still learning every step of the way. But I&apos;m driven by the idea that meaningful change doesn&apos;t need to be massive it just needs to be made.&quot;
                 </p>
                 <a 
                   href="https://www.linkedin.com/in/ehsamullahbaig" 
@@ -93,9 +96,11 @@ export default function TeamPage() {
                 <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 ease-out transform hover:scale-105 hover:bg-gradient-to-br hover:from-purple-50 hover:to-purple-100 group text-center max-w-sm mx-auto">
                   <div className="relative mb-6">
                     <div className="w-40 h-40 mx-auto rounded-full bg-gradient-to-br from-purple-400 to-pink-500 p-1 shadow-lg hover:w-44 hover:h-44 transition-all duration-300 ease-in-out">
-                      <img 
+                      <Image 
                         src="/images/team/sohail.jpg" 
                         alt="Sohail Karim" 
+                        width={160}
+                        height={160}
                         className="w-full h-full rounded-full object-cover object-center"
                       />
                     </div>
@@ -106,7 +111,7 @@ export default function TeamPage() {
                   <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-purple-800 transition-colors duration-300">Sohail Karim</h3>
                   <p className="text-purple-600 font-medium mb-3">Data Science Student | GIKI Institute</p>
                   <p className="text-gray-600 text-sm mb-4 leading-relaxed">
-                    "I've always been curious about how technology can make life better. Lately, I've been diving into the world of AI and machine learning. It's all new to me, but I'm genuinely excited to learn and grow. Being part of Makeistan gives me the chance to explore these areas, contribute to real projects, and turn my interest into something meaningful."
+                    &quot;I&apos;ve always been curious about how technology can make life better. Lately, I&apos;ve been diving into the world of AI and machine learning. It&apos;s all new to me, but I&apos;m genuinely excited to learn and grow. Being part of Makeistan gives me the chance to explore these areas, contribute to real projects, and turn my interest into something meaningful.&quot;
                   </p>
                   <a 
                     href="https://www.linkedin.com/in/sohail-karim-a7902a200" 
@@ -124,9 +129,11 @@ export default function TeamPage() {
                 <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 ease-out transform hover:scale-105 hover:bg-gradient-to-br hover:from-pink-50 hover:to-rose-100 group text-center max-w-sm mx-auto">
                   <div className="relative mb-6">
                     <div className="w-40 h-40 mx-auto rounded-full bg-gradient-to-br from-pink-400 to-rose-500 p-1 shadow-lg hover:w-44 hover:h-44 transition-all duration-300 ease-in-out">
-                      <img 
+                      <Image 
                         src="/images/team/malaika.jpg" 
                         alt="Malayika Mashroof Khan" 
+                        width={160}
+                        height={160}
                         className="w-full h-full rounded-full object-cover object-center"
                       />
                     </div>
@@ -137,7 +144,7 @@ export default function TeamPage() {
                   <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-pink-800 transition-colors duration-300">Malayika Mashroof Khan</h3>
                   <p className="text-pink-600 font-medium mb-3">Electrical Engineering Student | Purpose-Driven Innovator</p>
                   <p className="text-gray-600 text-sm mb-4 leading-relaxed">
-                    "With every circuit I design and every system I build, I aim to bring ideas to life. I'm passionate about applying technology to solve real-world challenges — smart, scalable, and sustainable."
+                    &quot;With every circuit I design and every system I build, I aim to bring ideas to life. I&apos;m passionate about applying technology to solve real-world challenges — smart, scalable, and sustainable.&quot;
                   </p>
                   <a 
                     href="#" 
@@ -155,9 +162,11 @@ export default function TeamPage() {
                 <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 ease-out transform hover:scale-105 hover:bg-gradient-to-br hover:from-orange-50 hover:to-orange-100 group text-center max-w-sm mx-auto">
                   <div className="relative mb-6">
                     <div className="w-40 h-40 mx-auto rounded-full bg-gradient-to-br from-orange-400 to-red-500 p-1 shadow-lg hover:w-44 hover:h-44 transition-all duration-300 ease-in-out">
-                      <img 
+                      <Image 
                         src="/images/team/yazdan.jpg" 
                         alt="Yazdan Ali Khan" 
+                        width={160}
+                        height={160}
                         className="w-full h-full rounded-full object-cover object-center"
                       />
                     </div>
@@ -168,7 +177,7 @@ export default function TeamPage() {
                   <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-orange-800 transition-colors duration-300">Yazdan Ali Khan</h3>
                   <p className="text-orange-600 font-medium mb-3">Electrical Engineering Student | GIKI Institute</p>
                   <p className="text-gray-600 text-sm mb-4 leading-relaxed">
-                    "I humbly attempt within my best efforts to design, build, and innovate with a focus on real-world application. As an electrical engineering student, I'm passionate about creating smart, efficient, and sustainable systems that solve problems and drive progress."
+                    &quot;I humbly attempt within my best efforts to design, build, and innovate with a focus on real-world application. As an electrical engineering student, I&apos;m passionate about creating smart, efficient, and sustainable systems that solve problems and drive progress.&quot;
                   </p>
                   <a 
                     href="#" 
@@ -186,9 +195,11 @@ export default function TeamPage() {
                 <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 ease-out transform hover:scale-105 hover:bg-gradient-to-br hover:from-indigo-50 hover:to-indigo-100 group text-center max-w-sm mx-auto">
                   <div className="relative mb-6">
                     <div className="w-40 h-40 mx-auto rounded-full bg-gradient-to-br from-indigo-400 to-blue-500 p-1 shadow-lg hover:w-44 hover:h-44 transition-all duration-300 ease-in-out">
-                      <img 
+                      <Image 
                         src="/images/team/mohsin.jpg" 
                         alt="Mohsin" 
+                        width={160}
+                        height={160}
                         className="w-full h-full rounded-full object-cover object-center"
                       />
                     </div>
@@ -199,7 +210,7 @@ export default function TeamPage() {
                   <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-indigo-800 transition-colors duration-300">Mohsin</h3>
                   <p className="text-indigo-600 font-medium mb-3">Computer Engineering Graduate | COMSATS Islamabad</p>
                   <p className="text-gray-600 text-sm mb-4 leading-relaxed">
-                    "I am a Computer Engineering graduate from COMSATS University Islamabad with a deep passion for technology, innovation, and problem-solving. With a strong foundation in both hardware and software systems, I focus on developing efficient, reliable, and scalable solutions. My academic background and hands-on project experience have equipped me with skills in programming, embedded systems, IoT applications, and system optimization. I'm driven by a curiosity to explore emerging technologies and a strong commitment to delivering impactful results, which I believe makes me a valuable contributor to any tech-driven initiative."
+                    &quot;I am a Computer Engineering graduate from COMSATS University Islamabad with a deep passion for technology, innovation, and problem-solving. With a strong foundation in both hardware and software systems, I focus on developing efficient, reliable, and scalable solutions. My academic background and hands-on project experience have equipped me with skills in programming, embedded systems, IoT applications, and system optimization. I&apos;m driven by a curiosity to explore emerging technologies and a strong commitment to delivering impactful results, which I believe makes me a valuable contributor to any tech-driven initiative.&quot;
                   </p>
                   <a 
                     href="#" 
@@ -223,7 +234,7 @@ export default function TeamPage() {
             <div className="max-w-4xl mx-auto px-8">
               <h3 className="text-3xl font-bold text-gray-800 mb-4">Ready to Make Impact?</h3>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                Join a team where your creativity shapes the future. Together, we're building more than projects—we're cultivating tomorrow's innovators.
+                Join a team where your creativity shapes the future. Together, we&apos;re building more than projects—we&apos;re cultivating tomorrow&apos;s innovators.
               </p>
               <div className="flex justify-center">
                 <a 

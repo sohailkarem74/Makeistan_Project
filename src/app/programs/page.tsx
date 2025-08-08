@@ -410,7 +410,7 @@ export default function Programs() {
             Want to Collaborate?
           </h2>
           <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-            We're always looking for partners, volunteers, and supporters to help us expand our impact. 
+            We&apos;re always looking for partners, volunteers, and supporters to help us expand our impact. 
             Join us in creating positive change in communities across Pakistan.
           </p>
           <div className="flex justify-center">

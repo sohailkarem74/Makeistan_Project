@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
+
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import BackButton from '@/components/BackButton';
@@ -58,14 +58,14 @@ export default function EnergyLab() {
               of load shedding, deforestation rising, and families struggling to stay warm.
             </p>
             <p className="text-gray-700 text-lg">
-              At Makiestan Official Energy, we're building clean, affordable, and locally-made energy solutions 
+              At Makiestan Official Energy, we&apos;re building clean, affordable, and locally-made energy solutions 
               designed for life in the mountains.
             </p>
           </section>
 
           {/* What We're Working On */}
           <section className="mb-12">
-            <h2 className="text-3xl font-bold text-green-600 mb-6">🔬 What We're Working On</h2>
+            <h2 className="text-3xl font-bold text-green-600 mb-6">🔬 What We&apos;re Working On</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-white border-2 border-green-200 p-6 rounded-lg shadow-md transition-all duration-500 ease-out transform hover:scale-105 hover:shadow-xl hover:bg-gradient-to-br hover:from-green-50 hover:to-green-100 group">
                 <h3 className="text-xl font-bold mb-3 text-green-800 group-hover:text-green-900 transition-colors duration-300">🔋 Micro Wind Turbines</h3>
@@ -94,7 +94,7 @@ export default function EnergyLab() {
           <section className="bg-green-50 p-8 rounded-lg text-center mb-12">
             <h2 className="text-2xl font-bold mb-4">🌟 Join Our Mission</h2>
             <p className="mb-6 text-gray-700">
-              We don't just prototype—we solve problems with our community. If you're an engineer, 
+              We don&apos;t just prototype—we solve problems with our community. If you&apos;re an engineer, 
               designer, or innovator passionate about green tech and energy justice, come build with us.
             </p>
           </section>
@@ -103,8 +103,7 @@ export default function EnergyLab() {
           <section className="mt-16 bg-gradient-to-r from-orange-50 to-yellow-50 rounded-2xl p-8 text-center">
             <h3 className="text-2xl font-bold text-gray-800 mb-4">Want to Collaborate?</h3>
             <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-              Interested in partnering with our Energy Lab or have a renewable energy project? We'd love to hear from you and explore how we can work together.
- a mail incon in get in otouch buttons in labs in labs get in touvh butoons add the icon of our work
+              Interested in partnering with our Energy Lab or have a renewable energy project? We&apos;d love to hear from you and explore how we can work together.
              </p>
             <div className="flex justify-center">
               <a

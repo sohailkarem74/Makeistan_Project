@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Navbar() {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -48,9 +49,11 @@ const navItems = [
             {/* Logo - Left Side */}
             <div className="flex items-center h-full">
               <Link href="/" className="flex items-center">
-                <img 
+                <Image 
                   src="/images/logo/llogo.png" 
                   alt="MAKEISTAN" 
+                  width={160}
+                  height={160}
                   className="h-40 w-auto"
                 />
               </Link>
@@ -99,7 +102,7 @@ const navItems = [
                         }}
                       >
                         <div className="py-2">
-                          {item.dropdown.map((dropdownItem, index) => (
+                          {item.dropdown.map((dropdownItem) => (
                             <Link
                               key={dropdownItem.name}
                               href={dropdownItem.href}

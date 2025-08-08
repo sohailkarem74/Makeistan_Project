@@ -4,9 +4,25 @@ import Link from 'next/link';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import BackButton from '../../components/BackButton';
-import { ExternalLink, MapPin, Users, Calendar, Target, Lightbulb, Zap, Leaf, Bot } from 'lucide-react';
+import { ExternalLink, MapPin, Target, Lightbulb, Zap, Leaf, Bot, LucideIcon } from 'lucide-react';
 
-const labs = [
+interface Lab {
+  id: number;
+  title: string;
+  description: string;
+  location: string;
+  focus: string;
+  image: string;
+  category: string;
+  link: string;
+  bgColor: string;
+  hoverColor: string;
+  icon: LucideIcon;
+  keyAreas: string[];
+  impact: string[];
+}
+
+const labs: Lab[] = [
   {
     id: 1,
     title: "Climate Innovation Lab",
@@ -94,7 +110,7 @@ const labs = [
 ];
 
 export default function LabsPage() {
-  const [selectedLab, setSelectedLab] = useState(null);
+  const [selectedLab, setSelectedLab] = useState<Lab | null>(null);
 
   return (
     <main className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
@@ -320,7 +336,7 @@ export default function LabsPage() {
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-10 text-center text-white">
             <h2 className="text-3xl font-bold mb-4">Ready to Innovate?</h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Join our labs and be part of Gilgit-Baltistan's innovation revolution. Whether you're a student, researcher, or innovator, there's a place for you.
+              Join our labs and be part of Gilgit-Baltistan&apos;s innovation revolution. Whether you&apos;re a student, researcher, or innovator, there&apos;s a place for you.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 

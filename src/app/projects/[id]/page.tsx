@@ -33,7 +33,7 @@ const ReadMore = ({ text, maxLength = 150 }: { text: string; maxLength?: number 
 interface Project {
   id: string;
   title: string;
-  [key: string]: any;
+  [key: string]: string | number | boolean | undefined;
 }
 
 interface ProjectStep {
@@ -52,13 +52,11 @@ interface ProjectItem {
 const ProjectSlideshow = ({ project }: { project: Project }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   
-  // Safety check for project object
-  if (!project || !project.id) {
-    return null;
-  }
-  
   // Define slides based on project ID
   const getSlides = () => {
+    if (!project || !project.id) {
+      return [];
+    }
     if (project.id === '1') {
       return [
         {
@@ -200,6 +198,16 @@ const ProjectSlideshow = ({ project }: { project: Project }) => {
   
   const slides = getSlides();
   
+  // useEffect hook must be called before any conditional returns
+  useEffect(() => {
+    if (!slides || slides.length === 0) return;
+    
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, [slides]);
+  
   // Debug logging
   console.log('Project ID:', project.id);
   console.log('Slides:', slides);
@@ -219,13 +227,6 @@ const ProjectSlideshow = ({ project }: { project: Project }) => {
       </div>
     );
   }
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000);
-    return () => clearInterval(timer);
-  }, [slides.length]);
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);

@@ -1,11 +1,11 @@
 "use client";
 
-import React, { useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import BackButton from '@/components/BackButton';
-import { ExternalLink, Calendar, MapPin, Users, Target } from 'lucide-react';
+import { ExternalLink, MapPin, Target } from 'lucide-react';
 
 const projects = [
   {
@@ -83,7 +83,6 @@ const projects = [
 ];
 
 export default function OurWorkPage() {
-  const [selectedProject, setSelectedProject] = useState(null);
   const filteredProjects = projects;
 
   return (
@@ -235,7 +234,7 @@ export default function OurWorkPage() {
             Want to Collaborate?
           </h2>
           <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-            We're always looking for partners, volunteers, and supporters to help us expand our impact. 
+            We&apos;re always looking for partners, volunteers, and supporters to help us expand our impact. 
             Join us in creating positive change in communities across Pakistan.
           </p>
           <div className="flex justify-center">
