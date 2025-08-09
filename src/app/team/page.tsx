@@ -121,15 +121,13 @@ export default function TeamPage() {
                 </div>
 
                 {/* Team Member 2 - Ajmal */}
-                <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-700 ease-out transform hover:scale-105 hover:-translate-y-2 hover:bg-gradient-to-br hover:from-amber-50 hover:to-amber-100 group text-center relative overflow-hidden">
-                  {/* Hover Effect Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-amber-500/5 to-orange-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  <div className="relative mb-6 z-10">
-                    <div className="w-40 h-40 mx-auto rounded-full bg-gradient-to-br from-amber-400 to-orange-500 p-1 shadow-lg group-hover:shadow-2xl transition-all duration-500 ease-in-out">
+                <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 ease-out transform hover:scale-105 hover:bg-gradient-to-br hover:from-amber-50 hover:to-amber-100 group text-center max-w-sm mx-auto">
+                  <div className="relative mb-6">
+                    <div className="w-40 h-40 mx-auto rounded-full bg-gradient-to-br from-amber-400 to-orange-500 p-1 shadow-lg hover:w-44 hover:h-44 transition-all duration-300 ease-in-out">
                       <img 
                         src="/images/team/ajmal.png" 
                         alt="Ajmal" 
-                        className="w-full h-full rounded-full object-cover object-center group-hover:scale-110 transition-transform duration-500"
+                        className="w-full h-full rounded-full object-cover object-center"
                       />
                     </div>
                     <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-amber-500 to-orange-500 text-white px-4 py-1.5 rounded-full text-xs font-bold shadow-lg">
@@ -154,15 +152,13 @@ export default function TeamPage() {
                 </div>
 
                 {/* Team Member 3 - Yazdan */}
-                <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-700 ease-out transform hover:scale-105 hover:-translate-y-2 hover:bg-gradient-to-br hover:from-orange-50 hover:to-orange-100 group text-center relative overflow-hidden">
-                  {/* Hover Effect Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-red-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  <div className="relative mb-6 z-10">
-                    <div className="w-40 h-40 mx-auto rounded-full bg-gradient-to-br from-orange-400 to-red-500 p-1 shadow-lg group-hover:shadow-2xl transition-all duration-500 ease-in-out">
+                <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 ease-out transform hover:scale-105 hover:bg-gradient-to-br hover:from-orange-50 hover:to-orange-100 group text-center max-w-sm mx-auto">
+                  <div className="relative mb-6">
+                    <div className="w-40 h-40 mx-auto rounded-full bg-gradient-to-br from-orange-400 to-red-500 p-1 shadow-lg hover:w-44 hover:h-44 transition-all duration-300 ease-in-out">
                       <img 
                         src="/images/team/yazdan.jpg" 
                         alt="Yazdan Ali Khan" 
-                        className="w-full h-full rounded-full object-cover object-center group-hover:scale-110 transition-transform duration-500"
+                        className="w-full h-full rounded-full object-cover object-center"
                       />
                     </div>
                     <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-1.5 rounded-full text-xs font-bold shadow-lg">
@@ -187,15 +183,13 @@ export default function TeamPage() {
                 </div>
 
                 {/* Team Member 4 - Malayika */}
-                <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-700 ease-out transform hover:scale-105 hover:-translate-y-2 hover:bg-gradient-to-br hover:from-pink-50 hover:to-rose-100 group text-center relative overflow-hidden">
-                  {/* Hover Effect Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-pink-500/5 to-rose-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  <div className="relative mb-6 z-10">
-                    <div className="w-40 h-40 mx-auto rounded-full bg-gradient-to-br from-pink-400 to-rose-500 p-1 shadow-lg group-hover:shadow-2xl transition-all duration-500 ease-in-out">
+                <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 ease-out transform hover:scale-105 hover:bg-gradient-to-br hover:from-pink-50 hover:to-rose-100 group text-center max-w-sm mx-auto">
+                  <div className="relative mb-6">
+                    <div className="w-40 h-40 mx-auto rounded-full bg-gradient-to-br from-pink-400 to-rose-500 p-1 shadow-lg hover:w-44 hover:h-44 transition-all duration-300 ease-in-out">
                       <img 
                         src="/images/team/malaika.jpg" 
                         alt="Malayika Mashroof Khan" 
-                        className="w-full h-full rounded-full object-cover object-center group-hover:scale-110 transition-transform duration-500"
+                        className="w-full h-full rounded-full object-cover object-center"
                       />
                     </div>
                     <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-pink-500 to-rose-500 text-white px-4 py-1.5 rounded-full text-xs font-bold shadow-lg">
@@ -220,15 +214,13 @@ export default function TeamPage() {
                 </div>
 
                 {/* Team Member 5 - Natasha */}
-                <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-700 ease-out transform hover:scale-105 hover:-translate-y-2 hover:bg-gradient-to-br hover:from-green-50 hover:to-green-100 group text-center relative overflow-hidden">
-                  {/* Hover Effect Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 to-emerald-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  <div className="relative mb-6 z-10">
-                    <div className="w-40 h-40 mx-auto rounded-full bg-gradient-to-br from-green-400 to-emerald-500 p-1 shadow-lg group-hover:shadow-2xl transition-all duration-500 ease-in-out">
+                <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 ease-out transform hover:scale-105 hover:bg-gradient-to-br hover:from-green-50 hover:to-green-100 group text-center max-w-sm mx-auto">
+                  <div className="relative mb-6">
+                    <div className="w-40 h-40 mx-auto rounded-full bg-gradient-to-br from-green-400 to-emerald-500 p-1 shadow-lg hover:w-44 hover:h-44 transition-all duration-300 ease-in-out">
                       <img 
                         src="/images/team/natasha.jpg" 
                         alt="Natasha Mehmood" 
-                        className="w-full h-full rounded-full object-cover object-center group-hover:scale-110 transition-transform duration-500"
+                        className="w-full h-full rounded-full object-cover object-center"
                       />
                     </div>
                     <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-1.5 rounded-full text-xs font-bold shadow-lg">
