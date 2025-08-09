@@ -133,7 +133,7 @@ export default function TeamPage() {
                       />
                     </div>
                     <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-amber-500 to-orange-500 text-white px-4 py-1.5 rounded-full text-xs font-bold shadow-lg">
-                      ⚡ Electrical Engineer
+                      Team Member
                     </div>
                   </div>
                   <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-amber-800 transition-colors duration-300">Ajmal Yaqoob</h3>
@@ -166,7 +166,7 @@ export default function TeamPage() {
                       />
                     </div>
                     <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-1.5 rounded-full text-xs font-bold shadow-lg">
-                      🚀 Student Innovator
+                      Team Member
                     </div>
                   </div>
                   <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-orange-800 transition-colors duration-300">Yazdan Ali Khan</h3>
@@ -199,7 +199,7 @@ export default function TeamPage() {
                       />
                     </div>
                     <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-pink-500 to-rose-500 text-white px-4 py-1.5 rounded-full text-xs font-bold shadow-lg">
-                      💡 Student Leader
+                      Team Member
                     </div>
                   </div>
                   <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-pink-800 transition-colors duration-300">Malayika Mashroof Khan</h3>
@@ -232,7 +232,7 @@ export default function TeamPage() {
                       />
                     </div>
                     <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-1.5 rounded-full text-xs font-bold shadow-lg">
-                      🎯 Entrepreneur
+                      Team Member
                     </div>
                   </div>
                   <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-green-800 transition-colors duration-300">Natasha Mehmood</h3>
