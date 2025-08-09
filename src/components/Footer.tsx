@@ -17,9 +17,7 @@ export default function Footer() {
       { name: 'Robotics & AI', href: '/labs/robotics' }
     ],
     programs: [
-      { name: 'Trainings', href: '/programs/trainings' },
-      { name: 'Fellowships', href: '/programs/fellowships' },
-      { name: 'Workshops', href: '/programs/workshops' }
+      { name: 'Fellowships', href: '/programs/fellowships' }
     ],
     social: [
       { name: 'Instagram', href: 'https://instagram.com/makeistan_', icon: 'instagram' },
@@ -59,7 +57,14 @@ export default function Footer() {
               <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
               </svg>
-              <span className="text-sm">Jutial, Gilgit, Gilgit Baltistan</span>
+              <a 
+                href="https://maps.google.com/?q=Jutial,+Gilgit,+Gilgit+Baltistan" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-sm hover:text-white transition-colors cursor-pointer"
+              >
+                Jutial, Gilgit, Gilgit Baltistan
+              </a>
             </div>
             
             <div className="mt-6 flex space-x-6">
@@ -126,12 +131,6 @@ export default function Footer() {
               © {currentYear} Makiestan Official. All rights reserved.
             </p>
             <div className="mt-4 md:mt-0 flex space-x-6 items-center">
-              <Link href="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
-                Privacy Policy
-              </Link>
-              <Link href="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">
-                Terms of Service
-              </Link>
               <Link href="/contact" className="text-gray-400 hover:text-white text-sm transition-colors">
                 Contact
               </Link>

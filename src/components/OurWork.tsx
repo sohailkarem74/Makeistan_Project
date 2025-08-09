@@ -24,8 +24,8 @@ const projects = [
   },
   {
     id: 4,
-    title: "Makeistan Fellowship at KIU Gilgit",
-    description: "Developing future leaders through innovation and technology",
+    title: "Smart Traditional Stove - Reimagining Heating for Mountain Communities",
+    description: "Re-engineering traditional stoves for fuel efficiency and smart heat distribution",
     status: "ongoing"
   }
 ];

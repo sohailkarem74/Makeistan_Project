@@ -62,7 +62,23 @@ const projects = [
       "Enhanced community resilience to climate challenges"
     ]
   },
-
+  {
+    id: 4,
+    title: "Smart Traditional Stove - Reimagining Heating for Mountain Communities",
+    description: "Re-engineering traditional stoves for fuel efficiency and smart heat distribution in high mountain regions where winters are long and harsh.",
+    location: "Gilgit-Baltistan & Chitral, Pakistan",
+    beneficiaries: "Mountain Communities",
+    status: "Prototyping",
+    statusColor: "bg-yellow-100 text-yellow-800",
+    image: "🔥",
+    category: "Innovation & Sustainability",
+    impact: [
+      "Currently prototyping with local families",
+      "Incorporating community feedback for practical design",
+      "Testing durability in harsh mountain conditions",
+      "Developing maintenance protocols for long-term use"
+    ]
+  },
   {
     id: 5,
     title: "Community Robotics Program",

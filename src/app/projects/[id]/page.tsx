@@ -119,22 +119,22 @@ const ProjectSlideshow = ({ project }: { project: Project }) => {
     } else if (project.id === '4') {
       return [
         {
-          image: "/images/fellowship/K1.jpg",
+          image: "/images/projects/st1.jpeg",
           title: project.title,
           subtitle: project.subtitle,
-          description: "Innovation and design thinking workshops at KIU"
+          description: "Traditional stove design with modern efficiency improvements"
         },
         {
-          image: "/images/fellowship/K2.jpeg",
+          image: "/images/projects/st2.jpeg",
           title: project.title,
           subtitle: project.subtitle,
-          description: "Students building innovative solutions with cutting-edge technology"
+          description: "Prototyping and testing fuel-efficient heating solutions"
         },
         {
-          image: "/images/fellowship/K3.jpg",
+          image: "/images/projects/st1.jpeg",
           title: project.title,
           subtitle: project.subtitle,
-          description: "Collaborative learning and prototype development"
+          description: "Community engagement and feedback on stove designs"
         }
       ];
     } else if (project.id === '5') {
@@ -315,9 +315,8 @@ const FellowshipSlideshow = ({ project }: { project: Project }) => {
   
   // Fellowship images based on project ID
   const fellowshipImages = project.id === '4' ? [
-    '/images/fellowship/K1.jpg',
-    '/images/fellowship/K2.jpeg',
-    '/images/fellowship/K3.jpg'
+    '/images/projects/st1.jpeg',
+    '/images/projects/st2.jpeg'
   ] : [
     '/images/fellowship/f1.JPG',
     '/images/fellowship/f2.JPG',
@@ -528,35 +527,35 @@ const projectData: { [key: string]: Project } = {
   },
   '4': {
     id: '4',
-    title: 'Makeistan Innovation Fellowship at KIU',
-    subtitle: 'Empowering Youth Innovation in Gilgit-Baltistan',
-    location: 'Karakoram International University, Gilgit',
-    beneficiaries: '140 Students',
-    status: 'Completed',
-    description: 'The Makeistan Innovation Fellowship (MIF), launched in collaboration with Karakoram International University (KIU) and its Business Incubation Centre, successfully completed its 3-week pilot with 140 students from BBA and Electrical Engineering. Through hands-on learning in design thinking, digital fabrication, and entrepreneurship, students built 16 interdisciplinary projects tackling real-world problems.',
-    approach: 'From smart irrigation systems to solar-wind energy solutions, and tech-enabled artisan tools, the program blended creativity, engineering, and business to spark innovation where it\'s needed most. The Fellowship focused on real-world problem-solving with local context and fostered cross-sector collaboration between academia, industry, and government.',
-    toolsIntroduced: 'The Fellowship introduced cutting-edge tools like Arduino microcontrollers, 3D printers, and various sensors to students. These technologies enabled hands-on learning and practical application of theoretical knowledge, empowering students to build functional prototypes and innovative solutions.',
-    futureVision: 'MIF has laid the foundation for a permanent Maker Lab at KIU and is set to become an annual flagship program, catalyzing a youth-led innovation ecosystem in Gilgit-Baltistan. This is just the beginning of a movement to equip the next generation with the tools to shape their future.',
+    title: 'Smart Traditional Stove - Reimagining Heating for Mountain Communities',
+    subtitle: 'Reimagining the Traditional Stove for a Warmer, Greener Future',
+    location: 'Gilgit-Baltistan and Chitral',
+    beneficiaries: 'Mountain Communities',
+    status: 'In Development',
+    description: 'At Makeistan, we\'re re-engineering the traditional stoves used in Gilgit-Baltistan and Chitral to meet the needs of today — without losing touch with the wisdom of the past. Our redesigned stove is more fuel-efficient, helping reduce firewood consumption and environmental impact in the high mountain regions where winters are long and harsh.',
+    approach: 'By integrating a repurposed car radiator, we\'re turning this stove into a smart heat distribution system — capable of transferring warmth from one room to another, making homes warmer, healthier, and more energy-efficient. This innovation not only cuts fuel use and heating costs but also contributes to cleaner indoor air and a more sustainable future for mountain communities.',
+    methodology: 'We\'re currently prototyping and testing this system with local families, incorporating their feedback to make it practical, durable, and easy to maintain. The goal is to scale this solution across remote areas, reducing the burden on women who collect firewood and helping protect our fragile mountain forests.',
+    futureVision: 'Innovation meets tradition — only at Makeistan. Our vision is to create a sustainable heating solution that respects traditional practices while introducing modern efficiency improvements for mountain communities.',
     goals: [
-      'Complete 3-week pilot program with 140 students',
-      'Build 16 interdisciplinary innovation projects',
-      'Introduce design thinking and digital fabrication',
-      'Establish permanent Maker Lab at KIU',
-      'Create annual flagship innovation program'
+      'Reduce firewood consumption by 40%',
+      'Improve heat distribution efficiency',
+      'Create cleaner indoor air quality',
+      'Reduce burden on women collecting firewood',
+      'Protect mountain forest ecosystems'
     ],
     impact: [
-      '140 students trained in innovation methodologies',
-      '16 real-world problem-solving projects completed',
-      'Permanent Maker Lab established at KIU',
-      'Cross-sector collaboration framework created',
-      'Youth-led innovation ecosystem catalyzed'
+      'More fuel-efficient heating systems',
+      'Reduced environmental impact',
+      'Improved indoor air quality',
+      'Enhanced home warmth distribution',
+      'Sustainable mountain community development'
     ],
     keyFeatures: [
-      'Arduino, 3D printers, and sensor technologies',
-      'Design thinking and entrepreneurship training',
-      'Interdisciplinary project-based learning',
-      'Academia-industry-government collaboration',
-      'Local context problem-solving approach'
+      'Fuel-efficient stove design',
+      'Repurposed car radiator integration',
+      'Smart heat distribution system',
+      'Community-tested prototypes',
+      'Traditional wisdom meets modern innovation'
     ]
   },
   '5': {
