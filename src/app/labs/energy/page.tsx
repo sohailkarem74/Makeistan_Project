@@ -58,7 +58,7 @@ export default function EnergyLab() {
               of load shedding, deforestation rising, and families struggling to stay warm.
             </p>
             <p className="text-gray-700 text-lg">
-              At Makiestan Official Energy, we're building clean, affordable, and locally-made energy solutions 
+              At Makeistan Energy, we're building clean, affordable, and locally-made energy solutions 
               designed for life in the mountains.
             </p>
           </section>

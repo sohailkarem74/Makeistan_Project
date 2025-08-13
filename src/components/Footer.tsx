@@ -1,10 +1,14 @@
 "use client";
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear();
+  const [currentYear, setCurrentYear] = useState(2024);
+
+  useEffect(() => {
+    setCurrentYear(new Date().getFullYear());
+  }, []);
 
   const footerLinks = {
     about: [
@@ -21,7 +25,7 @@ export default function Footer() {
     ],
     social: [
       { name: 'Instagram', href: 'https://instagram.com/makeistan_', icon: 'instagram' },
-      { name: 'LinkedIn', href: 'https://www.linkedin.com/company/Makeistan-official', icon: 'linkedin' },
+      { name: 'LinkedIn', href: 'https://www.linkedin.com/company/makeistan-official/posts/?feedView=all', icon: 'linkedin' },
       { name: 'X', href: '#', icon: 'twitter' },
       { name: 'Facebook', href: '#', icon: 'facebook' }
     ]
@@ -128,7 +132,7 @@ export default function Footer() {
         <div className="mt-12 pt-8 border-t border-gray-800">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
-              © {currentYear} Makiestan Official. All rights reserved.
+              © {currentYear} Makeistan. All rights reserved.
             </p>
             <div className="mt-4 md:mt-0 flex space-x-6 items-center">
               <Link href="/contact" className="text-gray-400 hover:text-white text-sm transition-colors">

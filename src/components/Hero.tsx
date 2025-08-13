@@ -119,7 +119,7 @@ export default function Hero() {
         <h1 className={`text-6xl md:text-7xl font-bold text-white mb-6 transition-all duration-700 ease-out transform tracking-wider ${
           isHovered ? 'scale-105 text-shadow-lg' : 'scale-100'
         }`}>
-          MAKEISTAN Official
+          MAKEISTAN
         </h1>
         <div className="space-y-4">
           <p className={`text-2xl md:text-3xl text-white font-light transition-all duration-500 ease-out transform ${

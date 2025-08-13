@@ -140,10 +140,11 @@ export default function TeamPage() {
                     "I am an Electrical Engineer specializing in power systems, renewable energy, and innovative electrical design. I have proven expertise in leading projects from concept to execution with precision and efficiency. I am skilled in MATLAB, Simulink, and advanced simulation tools for performance optimization. I am dedicated to delivering reliable, sustainable, and high-impact engineering solutions."
                   </p>
                   <a 
-                    href="#" 
-                    onClick={(e) => e.preventDefault()}
-                    className="inline-flex items-center justify-center w-10 h-10 bg-gray-400 text-white rounded-full cursor-not-allowed"
-                    title="LinkedIn profile coming soon"
+                    href="https://www.linkedin.com/in/ajmal-yaqoob-47485b267?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B5EdjoEXeTy262vEWw0yTIw%3D%3D" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center w-10 h-10 bg-amber-500 hover:bg-amber-600 text-white rounded-full transition-colors duration-300"
+                    title="Connect with Ajmal on LinkedIn"
                   >
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clipRule="evenodd" />
@@ -171,10 +172,11 @@ export default function TeamPage() {
                     "I humbly attempt within my best efforts to design, build, and innovate with a focus on real-world application. As an electrical engineering student, I'm passionate about creating smart, efficient, and sustainable systems that solve problems and drive progress."
                   </p>
                   <a 
-                    href="#" 
-                    onClick={(e) => e.preventDefault()}
-                    className="inline-flex items-center justify-center w-10 h-10 bg-gray-400 text-white rounded-full cursor-not-allowed"
-                    title="LinkedIn profile coming soon"
+                    href="https://www.linkedin.com/in/yazdan-ali-khan-9525742ba/" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center w-10 h-10 bg-orange-500 hover:bg-orange-600 text-white rounded-full transition-colors duration-300"
+                    title="Connect with Yazdan on LinkedIn"
                   >
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clipRule="evenodd" />
@@ -182,13 +184,13 @@ export default function TeamPage() {
                   </a>
                 </div>
 
-                {/* Team Member 4 - Malayika */}
+                {/* Team Member 4 - Malaika */}
                 <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 ease-out transform hover:scale-105 hover:bg-gradient-to-br hover:from-pink-50 hover:to-rose-100 group text-center max-w-sm mx-auto">
                   <div className="relative mb-6">
                     <div className="w-40 h-40 mx-auto rounded-full bg-gradient-to-br from-pink-400 to-rose-500 p-1 shadow-lg hover:w-44 hover:h-44 transition-all duration-300 ease-in-out">
                       <img 
                         src="/images/team/malaika.jpg" 
-                        alt="Malayika Mashroof Khan" 
+                        alt="Malaika Mashroof Khan" 
                         className="w-full h-full rounded-full object-cover object-center"
                       />
                     </div>
@@ -196,16 +198,17 @@ export default function TeamPage() {
                       Team Member
                     </div>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-pink-800 transition-colors duration-300">Malayika Mashroof Khan</h3>
+                  <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-pink-800 transition-colors duration-300">Malaika Mashroof Khan</h3>
                   <p className="text-pink-600 font-medium mb-3">Electrical Engineering Student | Purpose-Driven Innovator</p>
                   <p className="text-gray-600 text-sm mb-4 leading-relaxed">
                     "With every circuit I design and every system I build, I aim to bring ideas to life. I'm passionate about applying technology to solve real-world challenges — smart, scalable, and sustainable."
                   </p>
                   <a 
-                    href="#" 
-                    onClick={(e) => e.preventDefault()}
-                    className="inline-flex items-center justify-center w-10 h-10 bg-gray-400 text-white rounded-full cursor-not-allowed"
-                    title="LinkedIn profile coming soon"
+                    href="https://www.linkedin.com/in/malayika-mashroof-a5917029b?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BPCELj%2FbYRZi3X77Exkt9pg%3D%3D" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center w-10 h-10 bg-pink-500 hover:bg-pink-600 text-white rounded-full transition-colors duration-300 hover:scale-110 transform"
+                    title="Connect with Malaika on LinkedIn"
                   >
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clipRule="evenodd" />
@@ -233,10 +236,11 @@ export default function TeamPage() {
                     "I lead the entrepreneurship vertical at Makeistan, where I work to nurture innovation, creativity, and problem-solving among youth through STEM and maker-centered education. I design programs that equip young changemakers with the tools, mindset, and mentorship to turn ideas into impactful ventures. Committed to inclusive growth, I am driving a movement that connects education, entrepreneurship, and hands-on learning to build a resilient and future-ready generation."
                   </p>
                   <a 
-                    href="#" 
-                    onClick={(e) => e.preventDefault()}
-                    className="inline-flex items-center justify-center w-10 h-10 bg-gray-400 text-white rounded-full cursor-not-allowed"
-                    title="LinkedIn profile coming soon"
+                    href="https://www.linkedin.com/in/natasha-m-36279892?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bo23F9ingS%2Ba%2BQnR1YR78uQ%3D%3D" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center w-10 h-10 bg-green-500 hover:bg-green-600 text-white rounded-full transition-colors duration-300"
+                    title="Connect with Natasha on LinkedIn"
                   >
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clipRule="evenodd" />
@@ -264,10 +268,11 @@ export default function TeamPage() {
                     "I graduated in Mechanical Engineering from GIKI, where I worked on projects ranging from an alternate motion-controlled wheelchair for quadriplegics to electric vehicle systems and other mechanical design innovations. Alongside my core engineering work, I've also explored machine learning and deep learning, applying them to create smarter, more adaptive technologies. Pakistan's first collaborative makerspace feels like the perfect space to combine these skills, collaborate with a creative community, and help ideas grow into real-world impact."
                   </p>
                   <a 
-                    href="#" 
-                    onClick={(e) => e.preventDefault()}
-                    className="inline-flex items-center justify-center w-10 h-10 bg-gray-400 text-white rounded-full cursor-not-allowed"
-                    title="LinkedIn profile coming soon"
+                    href="https://www.linkedin.com/in/nisha-sher-675865187?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bz12K6keTQTao8SExLnZxkg%3D%3D" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center w-10 h-10 bg-teal-500 hover:bg-teal-600 text-white rounded-full transition-colors duration-300"
+                    title="Connect with Nisha on LinkedIn"
                   >
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clipRule="evenodd" />
@@ -295,10 +300,11 @@ export default function TeamPage() {
                     "I am a Computer Engineering graduate from COMSATS University Islamabad with a deep passion for technology, innovation, and problem-solving. With a strong foundation in both hardware and software systems, I focus on developing efficient, reliable, and scalable solutions. My academic background and hands-on project experience have equipped me with skills in programming, embedded systems, IoT applications, and system optimization. I'm driven by a curiosity to explore emerging technologies and a strong commitment to delivering impactful results, which I believe makes me a valuable contributor to any tech-driven initiative."
                   </p>
                   <a 
-                    href="#" 
-                    onClick={(e) => e.preventDefault()}
-                    className="inline-flex items-center justify-center w-10 h-10 bg-gray-400 text-white rounded-full cursor-not-allowed"
-                    title="LinkedIn profile coming soon"
+                    href="https://www.linkedin.com/in/mohsin-aziz-41a805290?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BsTEeAMpMSX2CQZ3QlVzeEQ%3D%3D" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center w-10 h-10 bg-indigo-500 hover:bg-indigo-600 text-white rounded-full transition-colors duration-300"
+                    title="Connect with Mohsin on LinkedIn"
                   >
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clipRule="evenodd" />

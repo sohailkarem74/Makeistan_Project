@@ -55,7 +55,7 @@ export default function ClimateLab() {
             <h2 className="text-3xl font-bold text-green-600 mb-4">Why MCIL?</h2>
             <p className="text-gray-800 text-lg mb-4">
               Climate change is real—and it's here. From glacier melt to water crises, 
-              Pakistan is at the frontline. MCIL is Makiestan Official's bold new initiative to 
+              Pakistan is at the frontline. MCIL is Makeistan's bold new initiative to 
               fight climate challenges with design, innovation, and community power.
             </p>
           </section>

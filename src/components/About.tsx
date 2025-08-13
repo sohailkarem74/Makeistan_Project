@@ -7,11 +7,11 @@ export default function About() {
   return (
     <section className="py-20 bg-white" id="about">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-4xl font-bold mb-8">About Makiestan Official</h2>
+        <h2 className="text-4xl font-bold mb-8">About Makeistan</h2>
         
         <div className="prose prose-lg mx-auto">
           <p className="text-xl text-gray-600 mb-8 leading-relaxed animate-fade-in-up animation-delay-200">
-            Makiestan Official is a collaborative innovation hub where creativity, technology, and community come together. 
+            Makeistan is a collaborative innovation hub where creativity, technology, and community come together. 
             Designed as an open-access makerspace, it empowers individuals, teams, and organizations to exchange ideas, 
             gain hands-on experience, and turn bold concepts into real-world solutions.
           </p>
