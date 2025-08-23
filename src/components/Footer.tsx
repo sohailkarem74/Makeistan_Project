@@ -25,9 +25,7 @@ export default function Footer() {
     ],
     social: [
       { name: 'Instagram', href: 'https://instagram.com/makeistan_', icon: 'instagram' },
-      { name: 'LinkedIn', href: 'https://www.linkedin.com/company/makeistan-official/posts/?feedView=all', icon: 'linkedin' },
-      { name: 'X', href: '#', icon: 'twitter' },
-      { name: 'Facebook', href: '#', icon: 'facebook' }
+      { name: 'LinkedIn', href: 'https://www.linkedin.com/company/makeistan-official/posts/?feedView=all', icon: 'linkedin' }
     ]
   };
 
@@ -135,9 +133,6 @@ export default function Footer() {
               © {currentYear} Makeistan. All rights reserved.
             </p>
             <div className="mt-4 md:mt-0 flex space-x-6 items-center">
-              <Link href="/contact" className="text-gray-400 hover:text-white text-sm transition-colors">
-                Contact
-              </Link>
               <button
                 onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                 className="ml-4 p-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-full hover:from-blue-600 hover:to-purple-700 transition-colors shadow-lg"
