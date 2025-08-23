@@ -47,10 +47,6 @@ const navItems: NavItem[] = [
       href: '/programs'
     },
     {
-      name: 'Blog',
-      href: '/blog'
-    },
-    {
       name: 'Our Work',
       href: '/work'
     }
