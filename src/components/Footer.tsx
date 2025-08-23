@@ -51,7 +51,7 @@ export default function Footer() {
             </Link>
             <p className="mt-4 text-gray-400 max-w-md">
               Gilgit Baltistan's first makerspace, empowering innovators to build sustainable solutions 
-              through robotics, AI, climate action, and green energy.
+              through Robotics, AI, Climate Action, and Green Energy.
             </p>
             
             {/* Location */}
